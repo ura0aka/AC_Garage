@@ -15,6 +15,7 @@ int main()
   WeaponUnit lwu1{1615,900,0,1,L_ARM_UNIT,"VVC-774LS",339000,3260,328,"VCPL",0};
   WeaponUnit lwu3{105,65,540,0,L_ARM_UNIT,"RF-024 TURNER",55000,3560,102,"Balam Industries",0};
   WeaponUnit lwu4{42,41,720,0,L_ARM_UNIT,"MG-014 LUDLOW",45000,2450,82,"Balam Industries",0};
+  WeaponUnit lwu6{900,840,53,0,L_ARM_UNIT,"SG-027 ZIMMERMAN",115000,4400,242,"Balam Industries",0};
 
   // BACK UNITS
   WeaponUnit rwu2{1058,807,30,0,R_BACK_UNIT,"VE-60SNA",283000,6150,826,"Arquebus ADD",0};
@@ -43,12 +44,26 @@ int main()
   Inventory c_Inventory;
   c_Inventory.add_part(&rwu3);
   c_Inventory.add_part(&lwu3);
-  
+  c_Inventory.add_part(&rwu4);
+  c_Inventory.add_part(&lwu4);
+  c_Inventory.add_part(&rwu6);
+  c_Inventory.add_part(&lwu6);
+  c_Inventory.add_part(&rwu5);
+  c_Inventory.add_part(&lwu5);
 
-  std::cout << ">> INVENTORY: \n";
+  c_Inventory.add_part(&hfp1);
+  c_Inventory.add_part(&cfp1);
+  c_Inventory.add_part(&afp1);
+  c_Inventory.add_part(&lfp1);
+  c_Inventory.add_part(&bfp1);
+  c_Inventory.add_part(&ffp1);
+  c_Inventory.add_part(&gfp1);
+  c_Inventory.add_part(&efp1);
+
+  std::cout << ">> INVENTORY: \n"; 
   c_Inventory.display_inventory();
 
-  AC mech_1{&rwu1,&lwu1,&rwu2,&lwu2,&hfp1,&cfp1,&afp1,&lfp1,&bfp1,&ffp1,&gfp1,&efp1};
+  AC mech_1{&rwu1,&lwu1,&rwu2,&lwu2,&hfp2,&cfp2,&afp2,&lfp2,&bfp2,&ffp2,&gfp2,nullptr}; // default AC
   mech_1.m_PlayerInventory = &c_Inventory;
   mech_1.display_mech();
 
@@ -56,7 +71,6 @@ int main()
   
   mech_1.display_mech();
   std::cout << ">> INVENTORY: \n";
-
   c_Inventory.display_inventory();
   return 0;
 }

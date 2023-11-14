@@ -68,7 +68,14 @@ class Item
       std::cout << "Equipped. \n";
     }
     
-    std::string get_name() {return m_sItemName;}
+    std::string get_name() 
+    {
+      if(this == nullptr)
+      {
+        return "<EMPTY>\n";
+      }
+      return m_sItemName;
+    }
     std::uint32_t get_id() {return m_nId;}
     int get_cost() {return m_nItemCost;}
     int get_weight() {return m_nWeight;}
@@ -76,6 +83,10 @@ class Item
     std::string get_manu() {return m_sManufacturer;}
     int get_type() {return m_nCategoryID;}
     std::string get_category() {return m_sCategory;}
+    int get_AP() {return m_nAP;}
+    int get_kinDef() {return m_nKineticDefense;}
+    int get_enDef() {return m_nEnergyDefense;}
+    int get_exDef() {return m_nExplosiveDefense;}
 
   private:
     std::string m_sItemName {};
@@ -88,6 +99,7 @@ class Item
     std::string m_sManufacturer {};
     int m_nCategoryID {};
     bool m_bIsEquipped {};
+    int m_nAP, m_nKineticDefense, m_nEnergyDefense, m_nExplosiveDefense;
 };
 
 

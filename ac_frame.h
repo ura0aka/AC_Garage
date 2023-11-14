@@ -72,6 +72,11 @@ class AC
     int m_nWeight {};
     int m_nENLoad {};
     int m_nKineticDefense, m_nEnergyDefense, m_nExplosiveDefense {};
+    
+    void calculate_stats()
+    {
+      m_nAP = m_Head.get
+    }
 
     void display_mech()
     {

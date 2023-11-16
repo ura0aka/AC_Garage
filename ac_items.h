@@ -170,6 +170,13 @@ class FramePart : public Item
 
   ~FramePart() {};
 
+  std::string derived_get_name()
+  {
+    // derived function from the base Item class
+    std::string m_sName = get_name();
+    return m_sName;
+  }
+
   void display_specific()
   {
     std::cout << ">> [" << m_sCategory << "] \n";

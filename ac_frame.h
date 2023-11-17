@@ -2,11 +2,11 @@
 #ifndef ACFRAME_H
 #define ACFRAME_H
 
-#include "ac_items.h"
+#include "ac_parts.h"
 #include "inventory.h"
 #include <vector>
 #include <limits>
-class Item;
+class Part;
 class WeaponUnit;
 class FramePart;
 class Inventory;
@@ -63,12 +63,12 @@ class AC
     Inventory *m_PlayerInventory;
 
     // Unit
-    Item *m_rArmUnit, *m_lArmUnit; 
-    Item *m_rBackUnit, *m_lBackUnit;
+    Part *m_rArmUnit, *m_lArmUnit; 
+    Part *m_rBackUnit, *m_lBackUnit;
     // Frame & Inner
     FramePart *m_Head, *m_Arms, *m_Core, *m_Legs;
     std::vector<FramePart*> m_vFrameParts {};
-    Item *m_Booster, *m_FCS, *m_Generator, *m_Expansion;
+    Part *m_Booster, *m_FCS, *m_Generator, *m_Expansion;
     int m_nAP {};
     int m_nWeight {};
     int m_nENLoad {};
@@ -76,7 +76,7 @@ class AC
     
     void calculate_stats()
     {
-      m_nAP=0, m_nKineticDefense=0, m_nEnergyDefense=0, m_nExplosiveDefense=0;
+      m_nAP=0, m_nKineticDefense=0, m_nEnergyDefense=0, m_nExplosiveDefense=0; // reset values
       m_vFrameParts.push_back(m_Head);
       m_vFrameParts.push_back(m_Core);
       m_vFrameParts.push_back(m_Arms);
@@ -96,8 +96,8 @@ class AC
       std::cout << "===========================\n" << ">> {Your AC} : \n" << "[UNIT]" << "\nR-Arm Unit: " << m_rArmUnit->get_name() <<
         "\nL-Arm Unit: " << m_lArmUnit->get_name() <<  "\nR-Back Unit: " << m_rBackUnit->get_name() <<
         "\nL-Back Unit: " << m_lBackUnit->get_name() << '\n';
-      std::cout << "\n[FRAME]" << "\nHead: " << m_Head->derived_get_name() << "\nCore: " << m_Core->derived_get_name() <<
-        "\nArms: " << m_Arms->derived_get_name() << "\nLegs: " << m_Legs->derived_get_name() << '\n';
+      std::cout << "\n[FRAME]" << "\nHead: " << m_Head->get_name() << "\nCore: " << m_Core->get_name() <<
+        "\nArms: " << m_Arms->get_name() << "\nLegs: " << m_Legs->get_name() << '\n';
       std::cout << "\n[INNER]" << "\nBooster: " << m_Booster->get_name() << "\nFCS: " << m_FCS->get_name() <<
         "\nGenerator: " << m_Generator->get_name() << "\nExpansion: " << m_Expansion->get_name() << '\n';
       std::cout << "\nTotal AP: " << m_nAP << "\nAnti-Kinetic Defense: " << m_nKineticDefense <<
@@ -113,7 +113,7 @@ class AC
       std::cout << "\n[INNER]\n9.Booster\n10.FCS\n11.Generator\n12.Expansion\n";
       int nOption = prompt_for_numeric<int>("\nEnter number:");
 
-      Item* c_tempItem;
+      Part* c_tempPart;
       FramePart* c_tempFramePart;
       switch(nOption)
       {
@@ -125,8 +125,8 @@ class AC
             m_PlayerInventory->add_part(m_rArmUnit); // send existing part back to inventory
           }
           m_PlayerInventory->display_sorted(R_ARM_UNIT);
-          c_tempItem = m_PlayerInventory->select_part(prompt_for_numeric<int>("\nEnter part ID: "));
-          m_rArmUnit = c_tempItem;
+          c_tempPart = m_PlayerInventory->select_part(prompt_for_numeric<int>("\nEnter part ID: "));
+          m_rArmUnit = c_tempPart;
           break;
         }
         case 2:
@@ -136,8 +136,8 @@ class AC
             m_PlayerInventory->add_part(m_lArmUnit); // send existing part back to inventory
           }
           m_PlayerInventory->display_sorted(L_ARM_UNIT);
-          c_tempItem = m_PlayerInventory->select_part(prompt_for_numeric<int>("\nEnter part ID: "));
-          m_lArmUnit = c_tempItem;
+          c_tempPart = m_PlayerInventory->select_part(prompt_for_numeric<int>("\nEnter part ID: "));
+          m_lArmUnit = c_tempPart;
           break;
         }
         case 3:
@@ -147,8 +147,8 @@ class AC
             m_PlayerInventory->add_part(m_rBackUnit); // send existing part back to inventory
           }
           m_PlayerInventory->display_sorted(R_BACK_UNIT);
-          c_tempItem = m_PlayerInventory->select_part(prompt_for_numeric<int>("\nEnter part ID: "));
-          m_rBackUnit = c_tempItem;
+          c_tempPart = m_PlayerInventory->select_part(prompt_for_numeric<int>("\nEnter part ID: "));
+          m_rBackUnit = c_tempPart;
           break;
         }
         case 4:
@@ -158,8 +158,8 @@ class AC
             m_PlayerInventory->add_part(m_lBackUnit); // send existing part back to inventory
           }
           m_PlayerInventory->display_sorted(L_BACK_UNIT);
-          c_tempItem = m_PlayerInventory->select_part(prompt_for_numeric<int>("\nEnter part ID: "));
-          m_lBackUnit = c_tempItem;
+          c_tempPart = m_PlayerInventory->select_part(prompt_for_numeric<int>("\nEnter part ID: "));
+          m_lBackUnit = c_tempPart;
           break;
         }
         case 5:
@@ -169,7 +169,7 @@ class AC
             m_PlayerInventory->add_part(m_Head); // send existing part back to inventory
           }
           m_PlayerInventory->display_sorted(HEAD);
-          c_tempFramePart = m_PlayerInventory->select_part(prompt_for_numeric<int>("\nEnter part ID: "));
+          c_tempPart = m_PlayerInventory->select_part(prompt_for_numeric<int>("\nEnter part ID: "));
           m_Head = c_tempFramePart;
           break;
         }
@@ -180,7 +180,7 @@ class AC
             m_PlayerInventory->add_part(m_Core); // send existing part back to inventory
           }
           m_PlayerInventory->display_sorted(CORE);
-          c_tempFramePart = m_PlayerInventory->select_part(prompt_for_numeric<int>("\nEnter part ID: "));
+          c_tempPart = m_PlayerInventory->select_part(prompt_for_numeric<int>("\nEnter part ID: "));
           m_Core = c_tempFramePart;
           break;
         }
@@ -191,7 +191,7 @@ class AC
             m_PlayerInventory->add_part(m_Arms); // send existing part back to inventory
           }
           m_PlayerInventory->display_sorted(ARMS);
-          c_tempItem = m_PlayerInventory->select_part(prompt_for_numeric<int>("\nEnter part ID: "));
+          c_tempPart = m_PlayerInventory->select_part(prompt_for_numeric<int>("\nEnter part ID: "));
           m_Arms = c_tempFramePart;
           break;
         }
@@ -202,7 +202,7 @@ class AC
             m_PlayerInventory->add_part(m_Legs); // send existing part back to inventory
           }
           m_PlayerInventory->display_sorted(LEGS);
-          c_tempItem = m_PlayerInventory->select_part(prompt_for_numeric<int>("\nEnter part ID: "));
+          c_tempPart = m_PlayerInventory->select_part(prompt_for_numeric<int>("\nEnter part ID: "));
           m_Legs = c_tempFramePart;
           break;
         }
@@ -213,8 +213,8 @@ class AC
             m_PlayerInventory->add_part(m_Booster); // send existing part back to inventory
           }
           m_PlayerInventory->display_sorted(BOOSTER);
-          c_tempItem = m_PlayerInventory->select_part(prompt_for_numeric<int>("\nEnter part ID: "));
-          m_Booster = c_tempItem;
+          c_tempPart = m_PlayerInventory->select_part(prompt_for_numeric<int>("\nEnter part ID: "));
+          m_Booster = c_tempPart;
           break;
         }
         case 10:
@@ -224,8 +224,8 @@ class AC
             m_PlayerInventory->add_part(m_FCS); // send existing part back to inventory
           }
           m_PlayerInventory->display_sorted(FCS);
-          c_tempItem = m_PlayerInventory->select_part(prompt_for_numeric<int>("\nEnter part ID: "));
-          m_FCS = c_tempItem;
+          c_tempPart = m_PlayerInventory->select_part(prompt_for_numeric<int>("\nEnter part ID: "));
+          m_FCS = c_tempPart;
           break;
         }
         case 11:
@@ -235,8 +235,8 @@ class AC
             m_PlayerInventory->add_part(m_Generator); // send existing part back to inventory
           }
           m_PlayerInventory->display_sorted(GENERATOR);
-          c_tempItem = m_PlayerInventory->select_part(prompt_for_numeric<int>("\nEnter part ID: "));
-          m_Generator = c_tempItem;
+          c_tempPart = m_PlayerInventory->select_part(prompt_for_numeric<int>("\nEnter part ID: "));
+          m_Generator = c_tempPart;
           break;
         }
         case 12:
@@ -246,8 +246,8 @@ class AC
             m_PlayerInventory->add_part(m_Expansion); // send existing part back to inventory
           }
           m_PlayerInventory->display_sorted(EXPANSION);
-          c_tempItem = m_PlayerInventory->select_part(prompt_for_numeric<int>("\nEnter part ID: "));
-          m_Expansion = c_tempItem;
+          c_tempPart = m_PlayerInventory->select_part(prompt_for_numeric<int>("\nEnter part ID: "));
+          m_Expansion = c_tempPart;
           break;
         }
 

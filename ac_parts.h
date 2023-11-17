@@ -58,6 +58,19 @@ class Part
       << "\n>> Weight: " << m_nPartWeight << "\n>> EN load: " << m_nEnLoad 
       << "\n>> Manufacturer: " << m_sManufacturer << '\n';
     }
+    
+    std::string get_name() 
+    {
+      std::string s_temp = (this == nullptr) ? "<EMPTY>\n" : m_sPartName;
+      return s_temp;
+    }
+    std::uint32_t get_id() {return m_nPartID;}
+    int get_cost() {return m_nPartCost;}
+    int get_weight() {return m_nPartWeight;}
+    int get_enload() {return m_nEnLoad;}
+    std::string get_manu() {return m_sManufacturer;}
+    int get_type() {return m_nCategoryID;}
+    std::string get_category() {return m_sPartCategory;}
 
   protected:
     std::uint32_t m_nPartID {};
@@ -122,9 +135,15 @@ class FramePart : public Part
     {
       Part::display_stats();
       std::cout << ">> Armor Points: " << m_nArmorPoints <<
-      "\n>> Kinetic Defense: " << m_nKineticDefense << " >> Energy Defense: " << m_nEnergyDefense
-      << " >> Explosive Defense: " << m_nExplosiveDefense << '\n';
+      "\n>> Kinetic Defense: " << m_nKineticDefense << "\n>> Energy Defense: " << m_nEnergyDefense
+      << "\n>> Explosive Defense: " << m_nExplosiveDefense << '\n';
     }
+};
+
+class InnerPart : public Part
+{
+  public:
+
 };
 
 #endif // !ACPARTS_H

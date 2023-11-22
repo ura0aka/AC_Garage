@@ -65,11 +65,38 @@ int main()
 
   AC mech_1{&rwu1,&lwu1,&rwu2,&lwu2,&hfp2,&cfp2,&afp2,&lfp2,&bfp2,&ffp2,&gfp2,nullptr}; // default AC
   mech_1.m_PlayerInventory = &c_Inventory;
-  mech_1.display_mech();
-
-  mech_1.add_part();
+  bool in_garage = true;
+  while(in_garage)
+  {
+    std::cout << "What would you like to do, Raven? \n";
+    std::cout << "\n1.Add/Switch Parts \n2.Display Mech \n3.Display Inventory \n4.Quit \n";
+    int nOption = prompt_for_numeric<int>("Select an option: ");
+    switch(nOption)
+    {
+      case 1:
+      {
+        mech_1.add_part();
+        mech_1.display_mech();
+        break;
+      }
+      case 2:
+      {
+        mech_1.display_mech();
+        break;
+      }
+      case 3:
+      {
+        c_Inventory.display_inventory();
+        break;
+      }
+      case 4:
+      {
+        in_garage = false;
+        break;
+      }
+    }
+  }
   
-  mech_1.display_mech();
   //std::cout << ">> INVENTORY: \n";
   //c_Inventory.display_inventory();
   return 0;

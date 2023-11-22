@@ -58,7 +58,12 @@ class Part
       << "\n>> Weight: " << m_nPartWeight << "\n>> EN load: " << m_nEnLoad 
       << "\n>> Manufacturer: " << m_sManufacturer << '\n';
     }
-    
+   
+    virtual int get_AP() const {return m_nArmorPoints;}
+    virtual int get_Kin() const {return m_nKineticDefense;}
+    virtual int get_En() const {return m_nEnergyDefense;}
+    virtual int get_Exp() const {return m_nExplosiveDefense;}
+
     std::string get_name() 
     {
       std::string s_temp = (this == nullptr) ? "<EMPTY>\n" : m_sPartName;
@@ -71,7 +76,7 @@ class Part
     std::string get_manu() {return m_sManufacturer;}
     int get_type() {return m_nCategoryID;}
     std::string get_category() {return m_sPartCategory;}
-
+    
   protected:
     std::uint32_t m_nPartID {};
     static inline std::uint32_t m_nIdGenerator {0};
@@ -81,6 +86,10 @@ class Part
     int m_nPartCost, m_nPartWeight, m_nEnLoad {};
     std::string m_sManufacturer {};
     bool m_bIsEquipped {};
+
+    // only used to be overridden
+    int m_nArmorPoints {};
+    int m_nKineticDefense, m_nEnergyDefense, m_nExplosiveDefense {};
 };
 
 class WeaponUnit : public Part
@@ -138,6 +147,11 @@ class FramePart : public Part
       "\n>> Kinetic Defense: " << m_nKineticDefense << "\n>> Energy Defense: " << m_nEnergyDefense
       << "\n>> Explosive Defense: " << m_nExplosiveDefense << '\n';
     }
+
+    int get_AP() const override {return m_nArmorPoints;}
+    int get_Kin() const override {return m_nKineticDefense;}
+    int get_En() const override {return m_nEnergyDefense;}
+    int get_Exp() const override {return m_nExplosiveDefense;}
 };
 
 class InnerPart : public Part

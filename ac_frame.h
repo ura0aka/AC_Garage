@@ -66,33 +66,40 @@ class AC
     Part *m_rArmUnit, *m_lArmUnit; 
     Part *m_rBackUnit, *m_lBackUnit;
     // Frame & Inner
-    FramePart *m_Head, *m_Arms, *m_Core, *m_Legs;
-    std::vector<FramePart*> m_vFrameParts {};
+    Part *m_Head, *m_Arms, *m_Core, *m_Legs;
     Part *m_Booster, *m_FCS, *m_Generator, *m_Expansion;
+
     int m_nAP {};
     int m_nWeight {};
     int m_nENLoad {};
     int m_nKineticDefense, m_nEnergyDefense, m_nExplosiveDefense {};
     
-    void calculate_stats()
+    void count_stats()
     {
+      m_nWeight = 0, m_nENLoad = 0;
       m_nAP=0, m_nKineticDefense=0, m_nEnergyDefense=0, m_nExplosiveDefense=0; // reset values
+     
+      // load all frame parts into a vector to calculate in a loop
+      std::vector<Part*> m_vFrameParts {};
       m_vFrameParts.push_back(m_Head);
       m_vFrameParts.push_back(m_Core);
       m_vFrameParts.push_back(m_Arms);
       m_vFrameParts.push_back(m_Legs);
-      for(auto p : m_vFrameParts)
-      {
-        m_nAP += p->m_nArmorPoints;
-        m_nKineticDefense += p->m_nKineticDefense;
-        m_nEnergyDefense += p->m_nEnergyDefense;
-        m_nExplosiveDefense += p->m_nExplosiveDefense;
+
+      for(const auto& part : m_vFrameParts)
+      {    
+        m_nAP += part->get_AP(); // hacked together, not very great looking
+        m_nKineticDefense += part->get_Kin();
+        m_nEnergyDefense += part->get_En();
+        m_nExplosiveDefense += part->get_Exp();
+        m_nWeight += part->get_weight();
+        m_nENLoad += part->get_enload();
       }
     }
 
     void display_mech()
     {
-      calculate_stats();
+      count_stats();
       std::cout << "===========================\n" << ">> {Your AC} : \n" << "[UNIT]" << "\nR-Arm Unit: " << m_rArmUnit->get_name() <<
         "\nL-Arm Unit: " << m_lArmUnit->get_name() <<  "\nR-Back Unit: " << m_rBackUnit->get_name() <<
         "\nL-Back Unit: " << m_lBackUnit->get_name() << '\n';
@@ -102,6 +109,7 @@ class AC
         "\nGenerator: " << m_Generator->get_name() << "\nExpansion: " << m_Expansion->get_name() << '\n';
       std::cout << "\nTotal AP: " << m_nAP << "\nAnti-Kinetic Defense: " << m_nKineticDefense <<
         "\nAnti-Energy Defense: " << m_nEnergyDefense << "\nAnti-Explosive Defense: " << m_nExplosiveDefense
+        << "\nTotal Weight: " << m_nWeight << "\nTotal EN Load: " << m_nENLoad
         << "\n===========================\n" ;
     }
 
@@ -113,8 +121,7 @@ class AC
       std::cout << "\n[INNER]\n9.Booster\n10.FCS\n11.Generator\n12.Expansion\n";
       int nOption = prompt_for_numeric<int>("\nEnter number:");
 
-      Part* c_tempPart;
-      FramePart* c_tempFramePart;
+      Part* c_tempPart; 
       switch(nOption)
       {
         std::cout << ">> Choose which part you want to equip. \n";
@@ -170,7 +177,7 @@ class AC
           }
           m_PlayerInventory->display_sorted(HEAD);
           c_tempPart = m_PlayerInventory->select_part(prompt_for_numeric<int>("\nEnter part ID: "));
-          m_Head = c_tempFramePart;
+          m_Head = c_tempPart;
           break;
         }
         case 6:
@@ -181,7 +188,7 @@ class AC
           }
           m_PlayerInventory->display_sorted(CORE);
           c_tempPart = m_PlayerInventory->select_part(prompt_for_numeric<int>("\nEnter part ID: "));
-          m_Core = c_tempFramePart;
+          m_Core = c_tempPart;
           break;
         }
         case 7:
@@ -192,7 +199,7 @@ class AC
           }
           m_PlayerInventory->display_sorted(ARMS);
           c_tempPart = m_PlayerInventory->select_part(prompt_for_numeric<int>("\nEnter part ID: "));
-          m_Arms = c_tempFramePart;
+          m_Arms = c_tempPart;
           break;
         }
         case 8:
@@ -203,7 +210,7 @@ class AC
           }
           m_PlayerInventory->display_sorted(LEGS);
           c_tempPart = m_PlayerInventory->select_part(prompt_for_numeric<int>("\nEnter part ID: "));
-          m_Legs = c_tempFramePart;
+          m_Legs = c_tempPart;
           break;
         }
         case 9:

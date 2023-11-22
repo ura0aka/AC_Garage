@@ -70,7 +70,7 @@ int main()
   mech_1.add_part();
   
   mech_1.display_mech();
-  std::cout << ">> INVENTORY: \n";
-  c_Inventory.display_inventory();
+  //std::cout << ">> INVENTORY: \n";
+  //c_Inventory.display_inventory();
   return 0;
 }

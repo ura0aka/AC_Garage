@@ -120,11 +120,10 @@ class AC
       std::cout << "\n[FRAME]\n5.Head\n6.Core\n7.Arms\n8.Legs";
       std::cout << "\n[INNER]\n9.Booster\n10.FCS\n11.Generator\n12.Expansion\n";
       int nOption = prompt_for_numeric<int>("\nEnter number:");
-
+      std::cout << ">> Choose which part you want to equip. \n";
       Part* c_tempPart; 
       switch(nOption)
       {
-        std::cout << ">> Choose which part you want to equip. \n";
         case 1:
         {
           if(m_rArmUnit!=nullptr)

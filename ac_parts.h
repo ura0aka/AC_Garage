@@ -94,6 +94,7 @@ class Part
 
 class WeaponUnit : public Part
 {
+  // Everything that is a weapon (arm units & back units)
   public:
     int m_nAttackPower, m_nImpact, m_nTotalRounds {};
     bool m_bIsMelee {};
@@ -126,6 +127,7 @@ class WeaponUnit : public Part
 
 class FramePart : public Part
 {
+  // everything that is part of the AC body (Head,Core,Arms,Legs)
   public:
     int m_nArmorPoints {};
     int m_nKineticDefense, m_nEnergyDefense, m_nExplosiveDefense {};
@@ -136,9 +138,9 @@ class FramePart : public Part
        std::string name, int cost, int weight, int en_load, std::string manufacturer, bool is_equipped=false)
     : Part(category,name,cost,weight,en_load,manufacturer,is_equipped),
     m_nArmorPoints(ap), m_nKineticDefense(kin_def), m_nEnergyDefense(en_def), m_nExplosiveDefense(exp_def)
-  {
+    {
 
-  }
+    }
 
     void display_stats() const override
     {
@@ -154,9 +156,38 @@ class FramePart : public Part
     int get_Exp() const override {return m_nExplosiveDefense;}
 };
 
-class InnerPart : public Part
+class Booster : public Part
 {
+  // booster class made separately
   public:
+    int m_nThrust, m_nUpThrust, m_nQbThrust {};
+    float m_fQbReload {};
+
+    Booster() = default;
+
+    Booster(int thrust, int up_thrust, int qb_thrust, float qb_reload, int category,
+       std::string name, int cost, int weight, int en_load, std::string manufacturer, bool is_equipped=false)
+    : Part(category,name,cost,weight,en_load,manufacturer,is_equipped),
+    m_nThrust(thrust), m_nUpThrust(up_thrust), m_nQbThrust(qb_thrust), m_fQbReload(qb_reload)
+    {
+
+    }
+
+    void display_stats() const override
+    {
+      Part::display_stats();
+      std::cout << ">> Thrust: " << m_nThrust << "\n>> Upward Thrust: " << m_nUpThrust <<
+        "\n QB Thrust: " << m_nQbThrust << "\n QB Reload time: " << m_fQbReload << "s \n";
+    }
+};
+
+class FCS : public Part
+{
+
+};
+
+class Generator : public Part
+{
 
 };
 

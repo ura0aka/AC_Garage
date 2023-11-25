@@ -2,7 +2,9 @@
 #include "ac_parts.h"
 #include "ac_frame.h"
 #include "inventory.h"
+#include "ac_datafile.h"
 
+class Datafile;
 
 int main()
 {
@@ -60,14 +62,16 @@ int main()
   c_Inventory.add_part(&gfp1);
   c_Inventory.add_part(&efp1);
 
-  std::cout << ">> INVENTORY: \n"; 
-  c_Inventory.display_inventory();
+
 
   AC mech_1{&rwu1,&lwu1,&rwu2,&lwu2,&hfp2,&cfp2,&afp2,&lfp2,&bfp2,&ffp2,&gfp2,nullptr}; // default AC
   mech_1.m_PlayerInventory = &c_Inventory;
+
+  /*
   bool in_garage = true;
   while(in_garage)
   {
+    // run garage system
     std::cout << "What would you like to do, Raven? \n";
     std::cout << "\n1.Add/Switch Parts \n2.Display Mech \n3.Display Inventory \n4.Quit \n";
     int nOption = prompt_for_numeric<int>("Select an option: ");
@@ -96,7 +100,22 @@ int main()
       }
     }
   }
-  
+  */
+
+  Datafile df1;
+  df1[rwu1.get_name()]["Category"].set_string(rwu1.get_category());
+  df1[rwu1.get_name()]["Weight"].set_int(rwu1.get_weight());
+  df1[rwu1.get_name()]["Cost"].set_int(rwu1.get_cost());
+  df1[rwu1.get_name()]["EN Load"].set_int(rwu1.get_enload());
+  df1[rwu1.get_name()]["Manufacturer"].set_string(rwu1.get_manu());
+  df1[rwu1.get_name()]["R_ARM_UNIT"]["Attack Power"].set_int(rwu1.m_nAttackPower);
+  df1[rwu1.get_name()]["R_ARM_UNIT"]["Impact"].set_int(rwu1.m_nImpact);
+  df1[rwu1.get_name()]["R_ARM_UNIT"]["Total Rounds"].set_int(rwu1.m_nTotalRounds);
+
+
+
+  Datafile::write_to_file(df1, "test.dat");
+
   //std::cout << ">> INVENTORY: \n";
   //c_Inventory.display_inventory();
   return 0;

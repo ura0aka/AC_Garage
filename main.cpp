@@ -3,11 +3,13 @@
 #include "ac_frame.h"
 #include "inventory.h"
 #include "ac_datafile.h"
+#include "player.h"
 
 class Datafile;
 
 int main()
 {
+  Datafile df;
   // WeaponUnit(Category,ATK,Impact,Total Rounds,IsMelee,Name,Cost,Weight,EN Load,Manufacturer,IsEquipped)
 
   // ARM UNITS
@@ -18,13 +20,31 @@ int main()
   WeaponUnit lwu3{105,65,540,0,L_ARM_UNIT,"RF-024 TURNER",55000,3560,102,"Balam Industries",0};
   WeaponUnit lwu4{42,41,720,0,L_ARM_UNIT,"MG-014 LUDLOW",45000,2450,82,"Balam Industries",0};
   WeaponUnit lwu6{900,840,53,0,L_ARM_UNIT,"SG-027 ZIMMERMAN",115000,4400,242,"Balam Industries",0};
-
   // BACK UNITS
   WeaponUnit rwu2{1058,807,30,0,R_BACK_UNIT,"VE-60SNA",283000,6150,826,"Arquebus ADD",0};
   WeaponUnit rwu6{244*6,150*2,124,0,R_BACK_UNIT,"BML-G1/P31DUO-02",144000,1900,182,"Furlong Dynamics",0};
   WeaponUnit rwu5{103*6,72*6,228,0,R_BACK_UNIT,"BML-G2/P03MLT-06",111000,3840,241,"Furlong Dynamics",0};
   WeaponUnit lwu5{1058,807,30,0,L_BACK_UNIT,"VE-60SNA",283000,6150,826,"Arquebus ADD",0};
   WeaponUnit lwu2{103*6,72*6,228,0,L_BACK_UNIT,"BML-G2/P03MLT-06",111000,3840,241,"Furlong Dynamics",0};
+
+  std::vector<WeaponUnit*> v_AWeaponUnits{&rwu1,&rwu2,&rwu3,&rwu4,&rwu5,&rwu6,&lwu1,&lwu2,&lwu3,&lwu4,&lwu5,&lwu6};
+  for(const auto& part : v_AWeaponUnits)
+  { 
+    df[part->get_name()]["ID"].set_int(part->get_id());
+    df[part->get_name()]["Part Name"].set_string(part->get_name());
+    df[part->get_name()]["Category"].set_string(part->get_category());
+    df[part->get_name()]["Weight"].set_int(part->get_weight());
+    df[part->get_name()]["Cost"].set_int(part->get_cost());
+    df[part->get_name()]["EN Load"].set_int(part->get_enload());
+    df[part->get_name()]["Manufacturer"].set_string(part->get_manu());
+    df[part->get_name()][part->get_category()]["Attack Power"].set_int(part->m_nAttackPower);
+    df[part->get_name()][part->get_category()]["Impact"].set_int(part->m_nImpact);
+    df[part->get_name()][part->get_category()]["Total Rounds"].set_int(part->m_nTotalRounds);
+    
+    Datafile::write_to_file(df, "WeaponUnits.dat");
+  }
+  std::cout << "$Debug : Successfully loaded all WeaponUnit parts to file \n";
+
   // FramePart()
   FramePart hfp1{770,174,167,181,HEAD,"HC-2000/BC SHADE EYE",147000,3090,163,"RaD",0};
   FramePart hfp2{660,157,142,152,HEAD,"HC-2000 FINDER EYE",0,2670,125,"RaD",0};
@@ -95,6 +115,10 @@ int main()
       }
       case 4:
       {
+        == save AC build ==
+      }
+      case 5:
+      {
         in_garage = false;
         break;
       }
@@ -102,19 +126,12 @@ int main()
   }
   */
 
-  Datafile df1;
-  df1[rwu1.get_name()]["Category"].set_string(rwu1.get_category());
-  df1[rwu1.get_name()]["Weight"].set_int(rwu1.get_weight());
-  df1[rwu1.get_name()]["Cost"].set_int(rwu1.get_cost());
-  df1[rwu1.get_name()]["EN Load"].set_int(rwu1.get_enload());
-  df1[rwu1.get_name()]["Manufacturer"].set_string(rwu1.get_manu());
-  df1[rwu1.get_name()]["R_ARM_UNIT"]["Attack Power"].set_int(rwu1.m_nAttackPower);
-  df1[rwu1.get_name()]["R_ARM_UNIT"]["Impact"].set_int(rwu1.m_nImpact);
-  df1[rwu1.get_name()]["R_ARM_UNIT"]["Total Rounds"].set_int(rwu1.m_nTotalRounds);
 
 
 
-  Datafile::write_to_file(df1, "test.dat");
+  Player p1{mech_1,3000};
+  p1.player_display_mech();
+  p1.save_mech_data(df);
 
   //std::cout << ">> INVENTORY: \n";
   //c_Inventory.display_inventory();

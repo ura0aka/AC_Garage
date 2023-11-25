@@ -56,12 +56,24 @@ class AC
       : m_rArmUnit{r_arm_unit}, m_lArmUnit{l_arm_unit}, m_rBackUnit{r_back_unit}, m_lBackUnit{l_back_unit},
       m_Head{head}, m_Core{core}, m_Arms{arms}, m_Legs{legs}, m_Booster{booster}, m_FCS{fcs}, m_Generator{generator}, m_Expansion{expansion}
     {
+      m_vPACParts.push_back(m_rArmUnit);
+      m_vPACParts.push_back(m_lArmUnit);
+      m_vPACParts.push_back(m_rBackUnit);
+      m_vPACParts.push_back(m_lBackUnit);
+      m_vPACParts.push_back(m_Head);
+      m_vPACParts.push_back(m_Core);
+      m_vPACParts.push_back(m_Arms);
+      m_vPACParts.push_back(m_Legs);
+      m_vPACParts.push_back(m_Booster);
+      m_vPACParts.push_back(m_FCS);
+      m_vPACParts.push_back(m_Generator);
+      m_vPACParts.push_back(m_Expansion);
     }
 
     ~AC() {};
 
     Inventory *m_PlayerInventory;
-
+    std::vector<Part*> m_vPACParts {};
     // Unit
     Part *m_rArmUnit, *m_lArmUnit; 
     Part *m_rBackUnit, *m_lBackUnit;
@@ -88,7 +100,7 @@ class AC
 
       for(const auto& part : m_vFrameParts)
       {    
-        m_nAP += part->get_AP(); // hacked together, not very great looking
+        m_nAP += part->get_AP(); // hacked together, not very great-looking code, too bad
         m_nKineticDefense += part->get_Kin();
         m_nEnergyDefense += part->get_En();
         m_nExplosiveDefense += part->get_Exp();

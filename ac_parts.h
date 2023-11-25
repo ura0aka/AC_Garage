@@ -59,6 +59,9 @@ class Part
       << "\n>> Manufacturer: " << m_sManufacturer << '\n';
     }
    
+    virtual int get_AttackPower() const {return m_nAttackPower;}
+    virtual int get_Impact() const {return m_nImpact;}
+    virtual int get_TotalRounds() const {return m_nTotalRounds;}
     virtual int get_AP() const {return m_nArmorPoints;}
     virtual int get_Kin() const {return m_nKineticDefense;}
     virtual int get_En() const {return m_nEnergyDefense;}
@@ -88,6 +91,9 @@ class Part
     bool m_bIsEquipped {};
 
     // only used to be overridden
+    int m_nAttackPower, m_nImpact, m_nTotalRounds {};
+    bool m_bIsMelee {};
+
     int m_nArmorPoints {};
     int m_nKineticDefense, m_nEnergyDefense, m_nExplosiveDefense {};
 };
@@ -122,7 +128,11 @@ class WeaponUnit : public Part
         "\n>> Total Rounds: " << m_nTotalRounds << '\n';
       }
     }
-    
+   
+    int get_AttackPower() const override {return m_nAttackPower;}
+    int get_Impact() const override {return m_nImpact;}
+    int get_TotalRounds() const override {return m_nTotalRounds;}
+
 };
 
 class FramePart : public Part

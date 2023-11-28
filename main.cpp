@@ -26,7 +26,8 @@ int main()
   WeaponUnit rwu5{103*6,72*6,228,0,R_BACK_UNIT,"BML-G2/P03MLT-06",111000,3840,241,"Furlong Dynamics",0};
   WeaponUnit lwu5{1058,807,30,0,L_BACK_UNIT,"VE-60SNA",283000,6150,826,"Arquebus ADD",0};
   WeaponUnit lwu2{103*6,72*6,228,0,L_BACK_UNIT,"BML-G2/P03MLT-06",111000,3840,241,"Furlong Dynamics",0};
-
+  
+  /*
   std::vector<WeaponUnit*> v_AWeaponUnits{&rwu1,&rwu2,&rwu3,&rwu4,&rwu5,&rwu6,&lwu1,&lwu2,&lwu3,&lwu4,&lwu5,&lwu6};
   for(const auto& part : v_AWeaponUnits)
   { 
@@ -44,7 +45,7 @@ int main()
     Datafile::write_to_file(df, "WeaponUnits.dat");
   }
   std::cout << "$Debug : Successfully loaded all WeaponUnit parts to file \n";
-
+  */
   // FramePart()
   FramePart hfp1{770,174,167,181,HEAD,"HC-2000/BC SHADE EYE",147000,3090,163,"RaD",0};
   FramePart hfp2{660,157,142,152,HEAD,"HC-2000 FINDER EYE",0,2670,125,"RaD",0};

@@ -31,6 +31,11 @@ class Player
   {
     for(const auto& part : m_cPlayerAC->m_vPACParts)
     {
+      if(part == nullptr)
+      {
+        std::cout << "< Empty, skipping...  >\n";
+        continue;
+      }
       df[part->get_name()]["ID"].set_int(part->get_id());
       df[part->get_name()]["Part Name"].set_string(part->get_name());
       df[part->get_name()]["Category"].set_string(part->get_category());
@@ -45,6 +50,16 @@ class Player
         df[part->get_name()][part->get_category()]["Impact"].set_int(part->get_Impact());
         df[part->get_name()][part->get_category()]["Total Rounds"].set_int(part->get_TotalRounds());
       }
+      if(part->get_type() <= 11 && part->get_type() > 3 )
+      {
+        // constitutes as all frame parts (head,core,arms,legs)
+        df[part->get_name()][part->get_category()]["Armor Points"].set_int(part->get_AP());
+        df[part->get_name()][part->get_category()]["Kinetic Defense"].set_int(part->get_Kin());
+        df[part->get_name()][part->get_category()]["Energy Defense"].set_int(part->get_En());
+        df[part->get_name()][part->get_category()]["Explosive Defense"].set_int(part->get_Exp());
+      }
+      std::cout << "Saved part:" << part->get_name() << '\n';
+
     }
     df.write_to_file(df, "AC_saveFile.dat");
   }

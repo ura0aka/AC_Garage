@@ -134,6 +134,32 @@ int main()
   p1.player_display_mech();
   p1.save_mech_data(df);
 
+  
+  std::vector<WeaponUnit*> v_AWeaponUnits{&rwu1,&rwu2,&rwu3,&rwu4,&rwu5,&rwu6,&lwu1,&lwu2,&lwu3,&lwu4,&lwu5,&lwu6};
+  for(const auto& part : v_AWeaponUnits)
+  { 
+    df[part->get_name()]["ID"].set_int(part->get_id());
+    df[part->get_name()]["Part Name"].set_string(part->get_name());
+    df[part->get_name()]["Category"].set_string(part->get_category());
+    df[part->get_name()]["Weight"].set_int(part->get_weight());
+    df[part->get_name()]["Cost"].set_int(part->get_cost());
+    df[part->get_name()]["EN Load"].set_int(part->get_enload());
+    df[part->get_name()]["Manufacturer"].set_string(part->get_manu());
+    df[part->get_name()][part->get_category()]["Attack Power"].set_int(part->m_nAttackPower);
+    df[part->get_name()][part->get_category()]["Impact"].set_int(part->m_nImpact);
+    df[part->get_name()][part->get_category()]["Total Rounds"].set_int(part->m_nTotalRounds);
+    
+    Datafile::write_to_file(df, "WeaponUnits.dat");
+  }
+
+
+  Datafile test1;
+  if(Datafile::read_from_file(test1, "WeaponUnits.dat", mech_1.m_vPACParts))
+  {
+    test1["RF-024 TURNER"]["Right Arm Unit"]["Sex?"].set_string("Yes");
+    Datafile::write_to_file(test1, "ReadTest1.dat");
+  }
+
   //std::cout << ">> INVENTORY: \n";
   //c_Inventory.display_inventory();
   return 0;

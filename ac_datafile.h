@@ -10,6 +10,7 @@
 #include <fstream>
 #include <sstream>
 #include <functional>
+#include <stack>
 #include "ac_parts.h"
 
 class Datafile
@@ -148,7 +149,68 @@ class Datafile
     }
 
     // == Reading from file ==
- 
+    inline static bool read_from_file(Datafile& n, const std::string& sFileName, std::vector<Part*> vParts)
+    {
+      std::ifstream file(sFileName);
+      if(file.is_open())
+      {
+        std::string sPropertyName = "";
+        std::string sPropertyValue = "";
+        // once code encounters: "{"; place property on stack to parse all of its children's data
+        std::stack<std::reference_wrapper<Datafile>> stkPath;
+        stkPath.push(n); // default property name (the actual name of the part)
+
+        while(!file.eof())
+        {
+          // read line by line
+          std::string line;
+          std::getline(file, line);
+          // lambda to trim whitespace from each line
+          auto trim = [](std::string& s)
+          {
+            s.erase(0,s.find_first_not_of(" \t\n\r\f\v")); // erase portion of string from index zero to the specified 
+            s.erase(s.find_last_not_of(" \t\n\r\f\v")+1);        
+          };
+
+          trim(line);
+
+          if(!line.empty())
+          {
+            // if line contains the assignment symbol "=", then we have a property
+            std::size_t x = line.find_first_of('=');
+            if(x != std::string::npos)
+            {
+              // grab the property name at the beginning of the line...
+              sPropertyName = line.substr(0,x);
+              trim(sPropertyName);
+              // grab the property value +1 index pos after assignment symbol
+              sPropertyValue = line.substr(x+1,line.size());
+              trim(sPropertyValue);
+
+              if(line[0] == '{')
+              {
+                // if code encounters '{', we are pushing the node to stack
+                stkPath.push(stkPath.top().get()[sPropertyName]);
+              }
+              else
+              {
+                if(line[0] == '}')
+                {
+                  // pop node from the stack since all of it's children's content has been read
+                  stkPath.pop();
+                }
+                else
+                {
+                  // once the code will encounter a simple name in the file (property name)
+                  sPropertyName = line;
+                }
+              }
+            }
+          }
+        }
+
+      }
+    }
 
   private:
     // list of stings that makes up the property value

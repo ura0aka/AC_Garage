@@ -13,6 +13,8 @@
 #include <stack>
 #include "ac_parts.h"
 
+class Part;
+
 class Datafile
 {
   public:

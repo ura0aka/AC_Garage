@@ -5,7 +5,7 @@
 #include <cstdint>
 #include <string>
 #include <iostream>
-
+#include "ac_datafile.h"
 enum partsCategoryID
 {
   R_ARM_UNIT = 0,
@@ -21,6 +21,8 @@ enum partsCategoryID
   GENERATOR = 10,
   EXPANSION = 11
 };
+
+class Datafile;
 
 class Part
 {
@@ -58,7 +60,21 @@ class Part
       << "\n>> Weight: " << m_nPartWeight << "\n>> EN load: " << m_nEnLoad 
       << "\n>> Manufacturer: " << m_sManufacturer << '\n';
     }
-   
+    
+    virtual void save(Datafile& df)
+    {
+      if(this == nullptr)
+        std::cout << "<Empty>...Skipping\n";
+      df[this->get_name()]["Category ID"].set_int(this->get_type());
+      df[this->get_name()]["ID"].set_int(this->get_id());
+      df[this->get_name()]["Part Name"].set_string(this->get_name());
+      df[this->get_name()]["Category"].set_string(this->get_category());
+      df[this->get_name()]["Cost"].set_int(this->get_cost());
+      df[this->get_name()]["Weight"].set_int(this->get_weight());
+      df[this->get_name()]["EN Load"].set_int(this->get_enload());
+      df[this->get_name()]["Manufacturer"].set_string(this->get_manu());
+    }
+
     virtual int get_AttackPower() const {return m_nAttackPower;}
     virtual int get_Impact() const {return m_nImpact;}
     virtual int get_TotalRounds() const {return m_nTotalRounds;}
@@ -90,7 +106,7 @@ class Part
     std::string m_sManufacturer {};
     bool m_bIsEquipped {};
 
-    // only used to be overridden
+    // == only used to be overridden == 
     int m_nAttackPower, m_nImpact, m_nTotalRounds {};
     bool m_bIsMelee {};
 
@@ -119,14 +135,18 @@ class WeaponUnit : public Part
     {
       Part::display_stats();
       if(Part::m_nCategoryID == L_ARM_UNIT && m_bIsMelee == true)
-      {
         std::cout << ">> ATK Power: " << m_nAttackPower << "\n>> Impact: " << m_nImpact << '\n';
-      }
       else
-      {
-        std::cout << ">> ATK Power: " << m_nAttackPower << "\n>> Impact: " << m_nImpact <<
-        "\n>> Total Rounds: " << m_nTotalRounds << '\n';
-      }
+        std::cout << ">> ATK Power: " << m_nAttackPower << "\n>> Impact: " << m_nImpact << "\n>> Total Rounds: " << m_nTotalRounds << '\n';
+    }
+
+    void save(Datafile& df) override
+    {
+      Part::save(df);
+      // constitutes as arm or back unit
+      df[this->get_name()][this->get_category()]["Attack Power"].set_int(this->get_AttackPower());
+      df[this->get_name()][this->get_category()]["Impact"].set_int(this->get_Impact());
+      df[this->get_name()][this->get_category()]["Total Rounds"].set_int(this->get_TotalRounds());
     }
    
     int get_AttackPower() const override {return m_nAttackPower;}
@@ -160,11 +180,22 @@ class FramePart : public Part
       << "\n>> Explosive Defense: " << m_nExplosiveDefense << '\n';
     }
 
+    void save(Datafile& df) override 
+    {
+      Part::save(df);
+      df[this->get_name()][this->get_category()]["Armor Points"].set_int(this->get_AP());
+      df[this->get_name()][this->get_category()]["Kinetic Defense"].set_int(this->get_Kin());
+      df[this->get_name()][this->get_category()]["Energy Defense"].set_int(this->get_En());
+      df[this->get_name()][this->get_category()]["Explosive Defense"].set_int(this->get_Exp());      
+    }
+
     int get_AP() const override {return m_nArmorPoints;}
     int get_Kin() const override {return m_nKineticDefense;}
     int get_En() const override {return m_nEnergyDefense;}
     int get_Exp() const override {return m_nExplosiveDefense;}
 };
+
+// == TODO: later, just implement the last of the more specific classes for inner parts
 
 class Booster : public Part
 {

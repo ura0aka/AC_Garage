@@ -134,7 +134,7 @@ int main()
   p1.player_display_mech();
   p1.save_mech_data(df);
 
-  
+ /* 
   std::vector<WeaponUnit*> v_AWeaponUnits{&rwu1,&rwu2,&rwu3,&rwu4,&rwu5,&rwu6,&lwu1,&lwu2,&lwu3,&lwu4,&lwu5,&lwu6};
   for(const auto& part : v_AWeaponUnits)
   { 
@@ -151,14 +151,8 @@ int main()
     
     Datafile::write_to_file(df, "WeaponUnits.dat");
   }
+*/
 
-
-  Datafile test1;
-  if(Datafile::read_from_file(test1, "WeaponUnits.dat", mech_1.m_vPACParts))
-  {
-    test1["RF-024 TURNER"]["Right Arm Unit"]["Sex?"].set_string("Yes");
-    Datafile::write_to_file(test1, "ReadTest1.dat");
-  }
 
   //std::cout << ">> INVENTORY: \n";
   //c_Inventory.display_inventory();

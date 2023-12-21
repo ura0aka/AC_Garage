@@ -77,16 +77,16 @@ class Part
     virtual void load(Datafile& df, const std::string& sFileName)
     {
       Datafile::read_from_file(df,sFileName);
-      std::string t_sName = df.get_propertyValue(df, sFileName, "Part Name");
-
-
-      std::cout <<">> Loading... " << t_sName << '\n';
-      this->m_nCategoryID = df[t_sName].get_int();
-      std::cout << m_nCategoryID << '\n';
-      this->m_nPartID = df[t_sName].get_int();
-      std::cout << m_nPartID << '\n';
-      this->m_sPartName = df[t_sName].get_string();
-      this->m_sPartCategory = df[t_sName].get_string();
+      m_sPartName = df.get_propertyValue(df, sFileName, "Part Name");
+      std::cout <<">> Loading... " << m_sPartName << '\n';
+      m_nCategoryID = std::stoi(df.get_propertyValue(df, sFileName, "Category ID"));
+      m_nPartID = std::stoi(df.get_propertyValue(df, sFileName, "ID"));
+      m_sPartCategory = df.get_propertyValue(df, sFileName, "Category");
+      m_nPartCost = std::stoi(df.get_propertyValue(df, sFileName, "Cost"));
+      m_nPartWeight = std::stoi(df.get_propertyValue(df, sFileName, "Weight"));
+      m_nEnLoad = std::stoi(df.get_propertyValue(df, sFileName, "EN Load"));
+      m_sManufacturer = df.get_propertyValue(df,  sFileName, "Manufacturer");
+      m_bIsEquipped = 0;
     }
 
     virtual int get_AttackPower() const {return m_nAttackPower;}
@@ -162,7 +162,16 @@ class WeaponUnit : public Part
       df[this->get_name()][this->get_category()]["Impact"].set_int(this->get_Impact());
       df[this->get_name()][this->get_category()]["Total Rounds"].set_int(this->get_TotalRounds());
     }
-   
+
+    void load(Datafile& df, const std::string& sFileName) override
+    {
+      Part::load(df,sFileName);
+      m_nAttackPower = std::stoi(df.get_propertyValue(df, sFileName, "Attack Power"));
+      m_nImpact = std::stoi(df.get_propertyValue(df, sFileName, "Impact"));
+      m_nTotalRounds = std::stoi(df.get_propertyValue(df, sFileName, "Total Rounds"));
+      m_bIsMelee = 0;
+    }
+ 
     int get_AttackPower() const override {return m_nAttackPower;}
     int get_Impact() const override {return m_nImpact;}
     int get_TotalRounds() const override {return m_nTotalRounds;}
@@ -201,6 +210,15 @@ class FramePart : public Part
       df[this->get_name()][this->get_category()]["Kinetic Defense"].set_int(this->get_Kin());
       df[this->get_name()][this->get_category()]["Energy Defense"].set_int(this->get_En());
       df[this->get_name()][this->get_category()]["Explosive Defense"].set_int(this->get_Exp());      
+    }
+
+    void load(Datafile& df, const std::string& sFileName) override
+    {
+      Part::load(df,sFileName);
+      m_nArmorPoints = std::stoi(df.get_propertyValue(df, sFileName, "Armor Points"));
+      m_nKineticDefense = std::stoi(df.get_propertyValue(df, sFileName, "Kinetic Defense"));
+      m_nEnergyDefense = std::stoi(df.get_propertyValue(df, sFileName, "Energy Defense"));
+      m_nExplosiveDefense = std::stoi(df.get_propertyValue(df, sFileName, "Explosive Defense"));
     }
 
     int get_AP() const override {return m_nArmorPoints;}

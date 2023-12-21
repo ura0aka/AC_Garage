@@ -9,12 +9,12 @@ class Datafile;
 
 void load_file(const std::string& sFilename)
 {
-  Part testPart;
+  FramePart testPart;
   Datafile df_load_test; // read from disk into datafile
   Datafile::read_from_file(df_load_test,sFilename);
   std::string sName = df_load_test.get_propertyValue(df_load_test, sFilename, "Part Name");
   testPart.load(df_load_test,sFilename);
-  std::cout << "sName: " << sName << '\n'; 
+  testPart.display_stats();
 }
 
 int main()
@@ -142,7 +142,7 @@ int main()
   Datafile::write_to_file(df_test, "alba_core.dat");
   Part test_part;
 
-  //load_file("alba_core.dat");
+  load_file("alba_core.dat");
   
   //Player p1{mech_1,3000};
   //p1.player_display_mech();

@@ -255,7 +255,7 @@ class Datafile
                 // grab the property value +1 index pos after assignment symbol
                 sPropertyValue = line.substr(x+1,line.size());
                 trim(sPropertyValue);
-                std::cout << ">>Part Name: " <<  sPropertyValue << '\n';
+                // std::cout << s_name << " = " <<  sPropertyValue << '\n';
                 return sPropertyValue;
               }  
 

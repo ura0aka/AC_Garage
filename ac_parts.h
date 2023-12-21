@@ -63,8 +63,7 @@ class Part
     
     virtual void save(Datafile& df)
     {
-      if(this == nullptr)
-        std::cout << "<Empty>...Skipping\n";
+      // save common part properties
       df[this->get_name()]["Category ID"].set_int(this->get_type());
       df[this->get_name()]["ID"].set_int(this->get_id());
       df[this->get_name()]["Part Name"].set_string(this->get_name());
@@ -73,6 +72,21 @@ class Part
       df[this->get_name()]["Weight"].set_int(this->get_weight());
       df[this->get_name()]["EN Load"].set_int(this->get_enload());
       df[this->get_name()]["Manufacturer"].set_string(this->get_manu());
+    }
+
+    virtual void load(Datafile& df, const std::string& sFileName)
+    {
+      Datafile::read_from_file(df,sFileName);
+      std::string t_sName = df.get_propertyValue(df, sFileName, "Part Name");
+
+
+      std::cout <<">> Loading... " << t_sName << '\n';
+      this->m_nCategoryID = df[t_sName].get_int();
+      std::cout << m_nCategoryID << '\n';
+      this->m_nPartID = df[t_sName].get_int();
+      std::cout << m_nPartID << '\n';
+      this->m_sPartName = df[t_sName].get_string();
+      this->m_sPartCategory = df[t_sName].get_string();
     }
 
     virtual int get_AttackPower() const {return m_nAttackPower;}

@@ -29,7 +29,6 @@ class Player
 
   void save_mech_data(Datafile &df)
   {
-
     for(const auto& part : m_cPlayerAC->m_vPACParts)
     {
       if(part == nullptr)
@@ -41,6 +40,11 @@ class Player
       std::cout << "Saved part:" << part->get_name() << '\n';
     }
     df.write_to_file(df, "AC_saveFile.dat");
+  }
+
+  void load_mech_data(Datafile &df)
+  {
+    m_cPlayerAC->m_vPACParts.erase(m_cPlayerAC->m_vPACParts.begin(),m_cPlayerAC->m_vPACParts.end());
   }
 
   private:

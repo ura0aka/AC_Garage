@@ -7,6 +7,16 @@
 
 class Datafile;
 
+void load_file(const std::string& sFilename)
+{
+  Part testPart;
+  Datafile df_load_test; // read from disk into datafile
+  Datafile::read_from_file(df_load_test,sFilename);
+  std::string sName = df_load_test.get_propertyValue(df_load_test, sFilename, "Part Name");
+  testPart.load(df_load_test,sFilename);
+  std::cout << "sName: " << sName << '\n'; 
+}
+
 int main()
 {
   Datafile df;
@@ -127,12 +137,18 @@ int main()
   }
   */
 
+  Datafile df_test;
+  cfp1.save(df_test);
+  Datafile::write_to_file(df_test, "alba_core.dat");
+  Part test_part;
 
-
-
-  Player p1{mech_1,3000};
-  p1.player_display_mech();
-  p1.save_mech_data(df);
+  //load_file("alba_core.dat");
+  
+  //Player p1{mech_1,3000};
+  //p1.player_display_mech();
+  //p1.save_mech_data(df);
+  
+  
 
  /* 
   std::vector<WeaponUnit*> v_AWeaponUnits{&rwu1,&rwu2,&rwu3,&rwu4,&rwu5,&rwu6,&lwu1,&lwu2,&lwu3,&lwu4,&lwu5,&lwu6};

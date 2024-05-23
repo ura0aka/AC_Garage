@@ -42,9 +42,10 @@ class Player
     df.write_to_file(df, "AC_saveFile.dat");
   }
 
-  void load_mech_data(Datafile &df)
+  void load_mech_data(Datafile &df, const std::string& sFileName)
   {
     m_cPlayerAC->m_vPACParts.erase(m_cPlayerAC->m_vPACParts.begin(),m_cPlayerAC->m_vPACParts.end());
+    m_cPlayerAC->m_rArmUnit->load(df,sFileName);
   }
 
   private:

@@ -144,7 +144,9 @@ class AC
           }
           m_PlayerInventory->display_sorted(R_ARM_UNIT);
           c_tempPart = m_PlayerInventory->select_part(prompt_for_numeric<int>("\nEnter part ID: "));
-          m_rArmUnit = c_tempPart;
+          std::cout << ">> temp part: ";
+          c_tempPart->display_stats();
+          m_vPACParts[0] = c_tempPart; // fumbled
           break;
         }
         case 2:

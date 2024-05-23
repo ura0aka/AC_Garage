@@ -6,7 +6,7 @@
 #include "player.h"
 
 class Datafile;
-
+/*
 void load_file(const std::string& sFilename)
 {
   FramePart testPart;
@@ -16,7 +16,7 @@ void load_file(const std::string& sFilename)
   testPart.load(df_load_test,sFilename);
   testPart.display_stats();
 }
-
+*/
 int main()
 {
   Datafile df;
@@ -97,21 +97,21 @@ int main()
 
   AC mech_1{&rwu1,&lwu1,&rwu2,&lwu2,&hfp2,&cfp2,&afp2,&lfp2,&bfp2,&ffp2,&gfp2,nullptr}; // default AC
   mech_1.m_PlayerInventory = &c_Inventory;
+  Player player_1{mech_1,3000};
 
-  /*
+  
   bool in_garage = true;
   while(in_garage)
   {
     // run garage system
     std::cout << "What would you like to do, Raven? \n";
-    std::cout << "\n1.Add/Switch Parts \n2.Display Mech \n3.Display Inventory \n4.Quit \n";
+    std::cout << "\n1.Add/Switch Parts \n2.Display Mech \n3.Display Inventory \n4.Save Build \n5.Quit \n";
     int nOption = prompt_for_numeric<int>("Select an option: ");
     switch(nOption)
     {
       case 1:
       {
         mech_1.add_part();
-        mech_1.display_mech();
         break;
       }
       case 2:
@@ -126,7 +126,8 @@ int main()
       }
       case 4:
       {
-        == save AC build ==
+        player_1.save_mech_data(df);
+        break;
       }
       case 5:
       {
@@ -135,15 +136,15 @@ int main()
       }
     }
   }
-  */
-
+  
+  /*
   Datafile df_test;
   cfp1.save(df_test);
   Datafile::write_to_file(df_test, "alba_core.dat");
   Part test_part;
 
   load_file("alba_core.dat");
-  
+  */
   //Player p1{mech_1,3000};
   //p1.player_display_mech();
   //p1.save_mech_data(df);

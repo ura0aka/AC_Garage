@@ -26,7 +26,25 @@ class Player
   {
     std::cout << ">> Player: " << m_sPlayerName << "\n>> Credits: " << m_nPlayerCredits << '\n';
   }
+  
+  void save_mech_data(Datafile &df)
+  {
+    for(auto bIter = m_cPlayerAC->m_vPACParts.begin(); bIter != m_cPlayerAC->m_vPACParts.end(); ++bIter)
+    {
+      const auto& part = bIter->second;
+      if(part == nullptr)
+      {
+        std::cout << "<Empty>...Skipping\n";
+        continue;
+      }
+      part->save(df); 
+      std::cout << "Saved part:" << part->get_name() << '\n';
+    }
+    df.write_to_file(df, "AC_saveFile.dat");
+  }
 
+  // == old ahh code ==
+  /*
   void save_mech_data(Datafile &df)
   {
     for(const auto& part : m_cPlayerAC->m_vPACParts)
@@ -41,6 +59,7 @@ class Player
     }
     df.write_to_file(df, "AC_saveFile.dat");
   }
+  */
 
   void load_mech_data(Datafile &df, const std::string& sFileName)
   {

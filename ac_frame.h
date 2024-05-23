@@ -6,6 +6,8 @@
 #include "inventory.h"
 #include <vector>
 #include <limits>
+#include <unordered_map>
+
 class Part;
 class WeaponUnit;
 class FramePart;
@@ -56,24 +58,38 @@ class AC
       : m_rArmUnit{r_arm_unit}, m_lArmUnit{l_arm_unit}, m_rBackUnit{r_back_unit}, m_lBackUnit{l_back_unit},
       m_Head{head}, m_Core{core}, m_Arms{arms}, m_Legs{legs}, m_Booster{booster}, m_FCS{fcs}, m_Generator{generator}, m_Expansion{expansion}
     {
-      m_vPACParts.push_back(m_rArmUnit);
-      m_vPACParts.push_back(m_lArmUnit);
-      m_vPACParts.push_back(m_rBackUnit);
-      m_vPACParts.push_back(m_lBackUnit);
-      m_vPACParts.push_back(m_Head);
-      m_vPACParts.push_back(m_Core);
-      m_vPACParts.push_back(m_Arms);
-      m_vPACParts.push_back(m_Legs);
-      m_vPACParts.push_back(m_Booster);
-      m_vPACParts.push_back(m_FCS);
-      m_vPACParts.push_back(m_Generator);
-      m_vPACParts.push_back(m_Expansion);
+      m_vPACParts[m_rArmUnit->get_id()] = m_rArmUnit; 
+      m_vPACParts[m_lArmUnit->get_id()] = m_lArmUnit;
+      m_vPACParts[m_rBackUnit->get_id()] = m_rBackUnit;
+      m_vPACParts[m_lBackUnit->get_id()] = m_lBackUnit;
+      m_vPACParts[m_Head->get_id()] = m_Head;
+      m_vPACParts[m_Core->get_id()] = m_Core;
+      m_vPACParts[m_Arms->get_id()] = m_Arms;
+      m_vPACParts[m_Legs->get_id()] = m_Legs;
+      m_vPACParts[m_Booster->get_id()] = m_Booster;
+      m_vPACParts[m_FCS->get_id()] = m_FCS;
+      m_vPACParts[m_Generator->get_id()] = m_Generator;
+      m_vPACParts[m_Expansion->get_id()] = m_Expansion; // initially there is no expansion part, fin a way to still add an empty object into the map without it crashing pls
+      /*
+      m_vPACParts.emplace(std::make_pair(m_rArmUnit->get_id(),&m_rArmUnit));
+      m_vPACParts.emplace(std::make_pair(m_lArmUnit->get_id(),&m_lArmUnit));
+      m_vPACParts.emplace(std::make_pair(m_rBackUnit->get_id(),&m_rBackUnit));
+      m_vPACParts.emplace(std::make_pair(m_lBackUnit->get_id(),&m_lBackUnit));
+      m_vPACParts.emplace(std::make_pair(m_Head->get_id(),&m_Head));
+      m_vPACParts.emplace(std::make_pair(m_Core->get_id(),&m_Core));
+      m_vPACParts.emplace(std::make_pair(m_Arms->get_id(),&m_Arms));
+      m_vPACParts.emplace(std::make_pair(m_Legs->get_id(),&m_Legs));
+      m_vPACParts.emplace(std::make_pair(m_Booster->get_id(),&m_Booster));
+      m_vPACParts.emplace(std::make_pair(m_FCS->get_id(),&m_FCS));
+      m_vPACParts.emplace(std::make_pair(m_Generator->get_id(),&m_Generator));
+      m_vPACParts.emplace(std::make_pair(m_Expansion->get_id(),&m_Expansion));
+      */
     }
 
     ~AC() {};
 
     Inventory *m_PlayerInventory;
-    std::vector<Part*> m_vPACParts {};
+    std::unordered_map<std::uint32_t,Part*> m_vPACParts {}; // parts hashmap
     // Unit
     Part *m_rArmUnit, *m_lArmUnit; 
     Part *m_rBackUnit, *m_lBackUnit;
@@ -125,6 +141,15 @@ class AC
         << "\n===========================\n" ;
     }
 
+    void display_hashmap()
+    {
+      for(auto bIter = m_vPACParts.begin(); bIter!=m_vPACParts.end(); bIter++)
+      {
+        std::cout << ">> Part: ";
+        bIter->second->display_stats();
+      }
+    }
+
     void add_part()
     {
       std::cout << "\n>> Which part to add? \n";
@@ -144,9 +169,12 @@ class AC
           }
           m_PlayerInventory->display_sorted(R_ARM_UNIT);
           c_tempPart = m_PlayerInventory->select_part(prompt_for_numeric<int>("\nEnter part ID: "));
-          std::cout << ">> temp part: ";
-          c_tempPart->display_stats();
-          m_vPACParts[0] = c_tempPart; // fumbled
+
+          // test:
+          std::cout << ">> Found part: "; m_vPACParts[c_tempPart->get_id()]->display_stats();
+
+
+          m_vPACParts[c_tempPart->get_id()] = c_tempPart;
           break;
         }
         case 2:

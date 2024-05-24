@@ -95,7 +95,7 @@ int main()
 
 
 
-  AC mech_1{&rwu1,&lwu1,&rwu2,&lwu2,&hfp2,&cfp2,&afp2,&lfp2,&bfp2,&ffp2,&gfp2,nullptr}; // default AC
+  AC mech_1{&rwu1,&lwu1,&rwu2,&lwu2,&hfp2,&cfp2,&afp2,&lfp2,&bfp2,&ffp2,&gfp2,&efp1}; // default AC
   mech_1.m_PlayerInventory = &c_Inventory;
   Player player_1{mech_1,3000};
 

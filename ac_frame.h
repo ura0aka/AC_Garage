@@ -69,21 +69,7 @@ class AC
       m_vPACParts[m_Booster->get_id()] = m_Booster;
       m_vPACParts[m_FCS->get_id()] = m_FCS;
       m_vPACParts[m_Generator->get_id()] = m_Generator;
-      m_vPACParts[m_Expansion->get_id()] = m_Expansion; // initially there is no expansion part, fin a way to still add an empty object into the map without it crashing pls
-      /*
-      m_vPACParts.emplace(std::make_pair(m_rArmUnit->get_id(),&m_rArmUnit));
-      m_vPACParts.emplace(std::make_pair(m_lArmUnit->get_id(),&m_lArmUnit));
-      m_vPACParts.emplace(std::make_pair(m_rBackUnit->get_id(),&m_rBackUnit));
-      m_vPACParts.emplace(std::make_pair(m_lBackUnit->get_id(),&m_lBackUnit));
-      m_vPACParts.emplace(std::make_pair(m_Head->get_id(),&m_Head));
-      m_vPACParts.emplace(std::make_pair(m_Core->get_id(),&m_Core));
-      m_vPACParts.emplace(std::make_pair(m_Arms->get_id(),&m_Arms));
-      m_vPACParts.emplace(std::make_pair(m_Legs->get_id(),&m_Legs));
-      m_vPACParts.emplace(std::make_pair(m_Booster->get_id(),&m_Booster));
-      m_vPACParts.emplace(std::make_pair(m_FCS->get_id(),&m_FCS));
-      m_vPACParts.emplace(std::make_pair(m_Generator->get_id(),&m_Generator));
-      m_vPACParts.emplace(std::make_pair(m_Expansion->get_id(),&m_Expansion));
-      */
+      m_vPACParts[m_Expansion->get_id()] = m_Expansion; // initially there is no expansion part, find a way to still add an empty object into the map without it crashing pls
     }
 
     ~AC() {};
@@ -109,10 +95,10 @@ class AC
      
       // load all frame parts into a vector to calculate in a loop
       std::vector<Part*> m_vFrameParts {};
-      m_vFrameParts.push_back(m_Head);
-      m_vFrameParts.push_back(m_Core);
-      m_vFrameParts.push_back(m_Arms);
-      m_vFrameParts.push_back(m_Legs);
+      m_vFrameParts.push_back(m_vPACParts[m_Head->get_id()]);
+      m_vFrameParts.push_back(m_vPACParts[m_Core->get_id()]);
+      m_vFrameParts.push_back(m_vPACParts[m_Arms->get_id()]);
+      m_vFrameParts.push_back(m_vPACParts[m_Legs->get_id()]);
 
       for(const auto& part : m_vFrameParts)
       {    
@@ -128,27 +114,19 @@ class AC
     void display_mech()
     {
       count_stats();
-      std::cout << "===========================\n" << ">> {Your AC} : \n" << "[UNIT]" << "\nR-Arm Unit: " << m_rArmUnit->get_name() <<
-        "\nL-Arm Unit: " << m_lArmUnit->get_name() <<  "\nR-Back Unit: " << m_rBackUnit->get_name() <<
-        "\nL-Back Unit: " << m_lBackUnit->get_name() << '\n';
-      std::cout << "\n[FRAME]" << "\nHead: " << m_Head->get_name() << "\nCore: " << m_Core->get_name() <<
-        "\nArms: " << m_Arms->get_name() << "\nLegs: " << m_Legs->get_name() << '\n';
-      std::cout << "\n[INNER]" << "\nBooster: " << m_Booster->get_name() << "\nFCS: " << m_FCS->get_name() <<
-        "\nGenerator: " << m_Generator->get_name() << "\nExpansion: " << m_Expansion->get_name() << '\n';
+      std::cout << "===========================\n" << ">> {Your AC} : \n" << "[UNIT]" << "\nR-Arm Unit: " << m_vPACParts[m_rArmUnit->get_id()]->get_name() <<
+        "\nL-Arm Unit: " << m_vPACParts[m_lArmUnit->get_id()]->get_name() <<  "\nR-Back Unit: " << m_vPACParts[m_rBackUnit->get_id()]->get_name() <<
+        "\nL-Back Unit: " << m_vPACParts[m_lBackUnit->get_id()]->get_name() << '\n';
+      std::cout << "\n[FRAME]" << "\nHead: " << m_vPACParts[m_Head->get_id()]->get_name() << "\nCore: " << m_vPACParts[m_Core->get_id()]->get_name() <<
+        "\nArms: " << m_vPACParts[m_Arms->get_id()]->get_name() << "\nLegs: " << m_vPACParts[m_Legs->get_id()]->get_name() << '\n';
+      std::cout << "\n[INNER]" << "\nBooster: " << m_vPACParts[m_Booster->get_id()]->get_name() << "\nFCS: " << m_vPACParts[m_FCS->get_id()]->get_name() <<
+        "\nGenerator: " << m_vPACParts[m_Generator->get_id()]->get_name() << "\nExpansion: " << m_vPACParts[m_Expansion->get_id()]->get_name() << '\n';
       std::cout << "\nTotal AP: " << m_nAP << "\nAnti-Kinetic Defense: " << m_nKineticDefense <<
         "\nAnti-Energy Defense: " << m_nEnergyDefense << "\nAnti-Explosive Defense: " << m_nExplosiveDefense
         << "\nTotal Weight: " << m_nWeight << "\nTotal EN Load: " << m_nENLoad
         << "\n===========================\n" ;
     }
 
-    void display_hashmap()
-    {
-      for(auto bIter = m_vPACParts.begin(); bIter!=m_vPACParts.end(); bIter++)
-      {
-        std::cout << ">> Part: ";
-        bIter->second->display_stats();
-      }
-    }
 
     void add_part()
     {
@@ -169,12 +147,7 @@ class AC
           }
           m_PlayerInventory->display_sorted(R_ARM_UNIT);
           c_tempPart = m_PlayerInventory->select_part(prompt_for_numeric<int>("\nEnter part ID: "));
-
-          // test:
-          std::cout << ">> Found part: "; m_vPACParts[c_tempPart->get_id()]->display_stats();
-
-
-          m_vPACParts[c_tempPart->get_id()] = c_tempPart;
+          m_vPACParts[m_rArmUnit->get_id()] = c_tempPart; // replace previous part with new one
           break;
         }
         case 2:
@@ -185,7 +158,7 @@ class AC
           }
           m_PlayerInventory->display_sorted(L_ARM_UNIT);
           c_tempPart = m_PlayerInventory->select_part(prompt_for_numeric<int>("\nEnter part ID: "));
-          m_lArmUnit = c_tempPart;
+          m_vPACParts[m_lArmUnit->get_id()] = c_tempPart;
           break;
         }
         case 3:
@@ -196,7 +169,7 @@ class AC
           }
           m_PlayerInventory->display_sorted(R_BACK_UNIT);
           c_tempPart = m_PlayerInventory->select_part(prompt_for_numeric<int>("\nEnter part ID: "));
-          m_rBackUnit = c_tempPart;
+          m_vPACParts[m_rBackUnit->get_id()] = c_tempPart;
           break;
         }
         case 4:
@@ -207,7 +180,7 @@ class AC
           }
           m_PlayerInventory->display_sorted(L_BACK_UNIT);
           c_tempPart = m_PlayerInventory->select_part(prompt_for_numeric<int>("\nEnter part ID: "));
-          m_lBackUnit = c_tempPart;
+          m_vPACParts[m_lBackUnit->get_id()] = c_tempPart;
           break;
         }
         case 5:
@@ -218,7 +191,7 @@ class AC
           }
           m_PlayerInventory->display_sorted(HEAD);
           c_tempPart = m_PlayerInventory->select_part(prompt_for_numeric<int>("\nEnter part ID: "));
-          m_Head = c_tempPart;
+          m_vPACParts[m_Head->get_id()] = c_tempPart;
           break;
         }
         case 6:
@@ -229,7 +202,7 @@ class AC
           }
           m_PlayerInventory->display_sorted(CORE);
           c_tempPart = m_PlayerInventory->select_part(prompt_for_numeric<int>("\nEnter part ID: "));
-          m_Core = c_tempPart;
+          m_vPACParts[m_Core->get_id()] = c_tempPart;
           break;
         }
         case 7:
@@ -240,7 +213,7 @@ class AC
           }
           m_PlayerInventory->display_sorted(ARMS);
           c_tempPart = m_PlayerInventory->select_part(prompt_for_numeric<int>("\nEnter part ID: "));
-          m_Arms = c_tempPart;
+          m_vPACParts[m_Arms->get_id()] = c_tempPart;
           break;
         }
         case 8:
@@ -251,7 +224,7 @@ class AC
           }
           m_PlayerInventory->display_sorted(LEGS);
           c_tempPart = m_PlayerInventory->select_part(prompt_for_numeric<int>("\nEnter part ID: "));
-          m_Legs = c_tempPart;
+          m_vPACParts[m_Legs->get_id()] = c_tempPart;
           break;
         }
         case 9:
@@ -262,7 +235,7 @@ class AC
           }
           m_PlayerInventory->display_sorted(BOOSTER);
           c_tempPart = m_PlayerInventory->select_part(prompt_for_numeric<int>("\nEnter part ID: "));
-          m_Booster = c_tempPart;
+          m_vPACParts[m_Booster->get_id()] = c_tempPart;
           break;
         }
         case 10:
@@ -273,7 +246,7 @@ class AC
           }
           m_PlayerInventory->display_sorted(FCS);
           c_tempPart = m_PlayerInventory->select_part(prompt_for_numeric<int>("\nEnter part ID: "));
-          m_FCS = c_tempPart;
+          m_vPACParts[m_FCS->get_id()] = c_tempPart;
           break;
         }
         case 11:
@@ -284,7 +257,7 @@ class AC
           }
           m_PlayerInventory->display_sorted(GENERATOR);
           c_tempPart = m_PlayerInventory->select_part(prompt_for_numeric<int>("\nEnter part ID: "));
-          m_Generator = c_tempPart;
+          m_vPACParts[m_Generator->get_id()] = c_tempPart;
           break;
         }
         case 12:
@@ -295,7 +268,7 @@ class AC
           }
           m_PlayerInventory->display_sorted(EXPANSION);
           c_tempPart = m_PlayerInventory->select_part(prompt_for_numeric<int>("\nEnter part ID: "));
-          m_Expansion = c_tempPart;
+          m_vPACParts[m_Expansion->get_id()] = c_tempPart;
           break;
         }
 

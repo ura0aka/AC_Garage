@@ -160,7 +160,7 @@ class Datafile
         std::string sPropertyValue = "";
         // once code encounters: "{"; place property on stack to parse all of its children's data
         std::stack<std::reference_wrapper<Datafile>> stkPath;
-        stkPath.push(n); // default property name (the actual name of the part)
+        stkPath.push(n); // default property name (the actual name of the part)  
 
         while(!file.eof())
         {
@@ -175,7 +175,6 @@ class Datafile
           };
           
           trim(line);
-
 
           if(!line.empty())
           {

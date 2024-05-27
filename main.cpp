@@ -6,6 +6,7 @@
 #include "player.h"
 
 class Datafile;
+
 /*
 void load_file(const std::string& sFilename)
 {
@@ -17,6 +18,7 @@ void load_file(const std::string& sFilename)
   testPart.display_stats();
 }
 */
+
 int main()
 {
   Datafile df;
@@ -37,25 +39,6 @@ int main()
   WeaponUnit lwu5{1058,807,30,0,L_BACK_UNIT,"VE-60SNA",283000,6150,826,"Arquebus ADD",0};
   WeaponUnit lwu2{103*6,72*6,228,0,L_BACK_UNIT,"BML-G2/P03MLT-06",111000,3840,241,"Furlong Dynamics",0};
   
-  /*
-  std::vector<WeaponUnit*> v_AWeaponUnits{&rwu1,&rwu2,&rwu3,&rwu4,&rwu5,&rwu6,&lwu1,&lwu2,&lwu3,&lwu4,&lwu5,&lwu6};
-  for(const auto& part : v_AWeaponUnits)
-  { 
-    df[part->get_name()]["ID"].set_int(part->get_id());
-    df[part->get_name()]["Part Name"].set_string(part->get_name());
-    df[part->get_name()]["Category"].set_string(part->get_category());
-    df[part->get_name()]["Weight"].set_int(part->get_weight());
-    df[part->get_name()]["Cost"].set_int(part->get_cost());
-    df[part->get_name()]["EN Load"].set_int(part->get_enload());
-    df[part->get_name()]["Manufacturer"].set_string(part->get_manu());
-    df[part->get_name()][part->get_category()]["Attack Power"].set_int(part->m_nAttackPower);
-    df[part->get_name()][part->get_category()]["Impact"].set_int(part->m_nImpact);
-    df[part->get_name()][part->get_category()]["Total Rounds"].set_int(part->m_nTotalRounds);
-    
-    Datafile::write_to_file(df, "WeaponUnits.dat");
-  }
-  std::cout << "$Debug : Successfully loaded all WeaponUnit parts to file \n";
-  */
   // FramePart()
   FramePart hfp1{770,174,167,181,HEAD,"HC-2000/BC SHADE EYE",147000,3090,163,"RaD",0};
   FramePart hfp2{660,157,142,152,HEAD,"HC-2000 FINDER EYE",0,2670,125,"RaD",0};
@@ -105,7 +88,7 @@ int main()
   {
     // run garage system
     std::cout << "What would you like to do, Raven? \n";
-    std::cout << "\n1.Add/Switch Parts \n2.Display Mech \n3.Display Inventory \n4.Save Build \n5.Quit \n";
+    std::cout << "\n1.Add/Switch Parts \n2.Display Mech \n3.Display Inventory \n4.Save Build \n5.Load Build \n6.Read File (test) \n7.Quit \n";
     int nOption = prompt_for_numeric<int>("Select an option: ");
     switch(nOption)
     {
@@ -126,10 +109,20 @@ int main()
       }
       case 4:
       {
-        player_1.save_mech_data(df);
+        player_1.save_mech_data();
         break;
       }
       case 5:
+      {
+        player_1.load_mech_data(df,"AC_saveFile.dat");
+        break;
+      }
+      case 6:
+      {
+        player_1.read_file("AC_saveFile.dat");
+        break;
+      }
+      case 7:
       {
         in_garage = false;
         break;
@@ -137,41 +130,5 @@ int main()
     }
   }
   
-  /*
-  Datafile df_test;
-  cfp1.save(df_test);
-  Datafile::write_to_file(df_test, "alba_core.dat");
-  Part test_part;
-
-  load_file("alba_core.dat");
-  */
-  //Player p1{mech_1,3000};
-  //p1.player_display_mech();
-  //p1.save_mech_data(df);
-  
-  
-
- /* 
-  std::vector<WeaponUnit*> v_AWeaponUnits{&rwu1,&rwu2,&rwu3,&rwu4,&rwu5,&rwu6,&lwu1,&lwu2,&lwu3,&lwu4,&lwu5,&lwu6};
-  for(const auto& part : v_AWeaponUnits)
-  { 
-    df[part->get_name()]["ID"].set_int(part->get_id());
-    df[part->get_name()]["Part Name"].set_string(part->get_name());
-    df[part->get_name()]["Category"].set_string(part->get_category());
-    df[part->get_name()]["Weight"].set_int(part->get_weight());
-    df[part->get_name()]["Cost"].set_int(part->get_cost());
-    df[part->get_name()]["EN Load"].set_int(part->get_enload());
-    df[part->get_name()]["Manufacturer"].set_string(part->get_manu());
-    df[part->get_name()][part->get_category()]["Attack Power"].set_int(part->m_nAttackPower);
-    df[part->get_name()][part->get_category()]["Impact"].set_int(part->m_nImpact);
-    df[part->get_name()][part->get_category()]["Total Rounds"].set_int(part->m_nTotalRounds);
-    
-    Datafile::write_to_file(df, "WeaponUnits.dat");
-  }
-*/
-
-
-  //std::cout << ">> INVENTORY: \n";
-  //c_Inventory.display_inventory();
   return 0;
 }

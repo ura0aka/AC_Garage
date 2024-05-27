@@ -5,6 +5,7 @@
 #include <cstdint>
 #include <string>
 #include <iostream>
+#include <filesystem>
 #include "ac_datafile.h"
 enum partsCategoryID
 {
@@ -76,6 +77,7 @@ class Part
 
     virtual void load(Datafile& df, const std::string& sFileName)
     {
+      std::cout << "Reading from file ..." << std::endl;
       Datafile::read_from_file(df,sFileName);
       m_sPartName = df.get_propertyValue(df, sFileName, "Part Name");
       std::cout <<">> Loading... " << m_sPartName << '\n';
@@ -252,6 +254,29 @@ class Booster : public Part
       std::cout << ">> Thrust: " << m_nThrust << "\n>> Upward Thrust: " << m_nUpThrust <<
         "\n QB Thrust: " << m_nQbThrust << "\n QB Reload time: " << m_fQbReload << "s \n";
     }
+
+    void save(Datafile& df) override
+    {
+      Part::save(df);
+      df[this->get_name()][this->get_category()]["Thrust"].set_int(this->get_Thrust());
+      df[this->get_name()][this->get_category()]["Up Thrust"].set_int(this->get_UpThrust());
+      df[this->get_name()][this->get_category()]["QB Thrust"].set_int(this->get_QbThrust());
+      df[this->get_name()][this->get_category()]["QB Reload Time"].set_real(this->get_QbReload());
+    }
+
+    void load(Datafile& df, const std::string& sFileName) override
+    {
+      Part::load(df,sFileName);
+      m_nThrust = std::stoi(df.get_propertyValue(df, sFileName, "Thrust"));
+      m_nUpThrust = std::stoi(df.get_propertyValue(df, sFileName, "Up Thrust"));
+      m_nQbThrust = std::stoi(df.get_propertyValue(df, sFileName, "QB Thrust"));
+      m_fQbReload = std::stof(df.get_propertyValue(df, sFileName, "QB Reload Time"));
+    }
+
+    int get_Thrust() const {return m_nThrust;}
+    int get_UpThrust() const {return m_nUpThrust;}
+    int get_QbThrust() const {return m_nQbThrust;}
+    float get_QbReload() const {return m_fQbReload;}
 };
 
 class FCS : public Part

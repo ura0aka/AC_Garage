@@ -6,7 +6,7 @@
 #include "inventory.h"
 #include <vector>
 #include <limits>
-#include <unordered_map>
+#include <map>
 
 class Part;
 class WeaponUnit;
@@ -75,7 +75,7 @@ class AC
     ~AC() {};
 
     Inventory *m_PlayerInventory;
-    std::unordered_map<std::uint32_t,Part*> m_vPACParts {}; // parts hashmap
+    std::map<std::uint32_t,Part*> m_vPACParts {}; // parts hashmap
     // Unit
     Part *m_rArmUnit, *m_lArmUnit; 
     Part *m_rBackUnit, *m_lBackUnit;

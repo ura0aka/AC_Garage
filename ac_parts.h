@@ -158,6 +158,7 @@ class WeaponUnit : public Part
 
     void save(Datafile& df) override
     {
+      std::cout << ">> Saved weapon unit. ";
       Part::save(df);
       // constitutes as arm or back unit
       df[this->get_name()][this->get_category()]["Attack Power"].set_int(this->get_AttackPower());

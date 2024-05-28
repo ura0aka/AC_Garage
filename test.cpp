@@ -1,34 +1,29 @@
 #include <iostream>
+#include <fstream>
 
-class Parent
+void readRandFile(const std::string& sFileName)
 {
-  public:
-    void sleep()
+    std::ifstream file(sFileName);
+    if(!file)
     {
-      std::cout << "Sleep \n";
+      std::cerr << ">> ERROR: Unable to open file" << std::endl;
+      return;
     }
-};
 
-class Child : public Parent
-{
-  public:
-    void school()
+    if(file.is_open())
     {
-      std::cout << "School \n";
+      while(!file.eof())
+      {
+        std::string line;
+        std::getline(file, line);
+        std::cout << line << std::endl;
+      }
     }
-};
+}
+
 
 int main()
 {
-  Parent *pParent = new Parent;
-  Child *pChild = new Child;
-
-  Child *p1 = (Child*) pParent; // not safe, assigns address of base class object to derived class
-  Parent *p2 = (Parent*) pChild; // safe
-
-  Parent *p = dynamic_cast<Parent*>(pChild);
-
-
-
-
+  readRandFile("AC_saveFile/HC-2000 FINDER EYE.dat");
+  return 0;
 }

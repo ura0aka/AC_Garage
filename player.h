@@ -31,6 +31,19 @@ class Player
   {
     // create directory to store each individual part for the AC
     std::string sDirName = "AC_saveFile";
+
+    // first erase all files to overwrite if files already present in directory
+    if(std::filesystem::exists(sDirName))
+    {
+      for(const auto& entry : std::filesystem::directory_iterator(sDirName))
+      {
+        if(std::filesystem::is_regular_file(entry.status()))
+        {
+          std::filesystem::remove(entry.path());
+          std::cout << ">> Erased: " << entry.path() << std::endl;
+        }
+      }
+    }
     if(!std::filesystem::exists(sDirName))
     {
       if(std::filesystem::create_directory(sDirName))
@@ -50,9 +63,10 @@ class Player
         std::cout << "<Empty>...Skipping\n";
         continue;
       }
-      part->save(df); 
       std::cout << "Saved part:" << part->get_name() << '\n';
+      part->save(df); 
       std::string temp_fileName = part->get_name() + ".dat"; // new file for each part
+      std::cout << ">> File created: " << temp_fileName << std::endl;
       std::string sFilePath = sDirName + "/" + temp_fileName;
       df.write_to_file(df,sFilePath);
     }
@@ -88,7 +102,6 @@ class Player
         std::string line;
         std::getline(file, line);
         int nTabs = countLeadingTabs(line);
-        std::cout << "Leading tabs: " << nTabs << std::endl;
         if(nTabs == 0)
         {
           // check if it's a part name or a bracket
@@ -102,6 +115,24 @@ class Player
     }
   }
 
+  void read_mech_data(const std::string& sDirName)
+  {
+    if(!std::filesystem::exists(sDirName))
+    {
+      std::cerr << ">> ERROR: Could not locate directory: " << sDirName << std::endl;
+      return;
+    }
+
+    for(const auto& entry : std::filesystem::directory_iterator(sDirName))
+    {
+      if(std::filesystem::is_regular_file(entry.status()))
+      {
+        std::string tempFileName = entry.path();
+        read_file(tempFileName);
+      }
+    }
+
+  }
 
   void load_mech_data(Datafile &df, const std::string& sFileName)
   {

@@ -73,49 +73,103 @@ class Player
   }
 
 
-  int countLeadingTabs(const std::string& line)
+  void load_mech_data(Datafile &df, const std::string& sFileName)
   {
-    int nCount = 0;
-    for(char c : line)
+    int nTempID;
+    Datafile::read_from_file(df,sFileName);
+    nTempID = std::stoi(df.get_propertyValue(df,sFileName, "Category ID"));
+    std::cout << ">> Category ID: " << nTempID << std::endl;
+    switch(nTempID)
     {
-      if(c == '\t')
-        nCount ++;
-      else
-        break;
-    }
-    return nCount;
-  }
-
-  void read_file(const std::string& sFileName)
-  {
-    std::ifstream file(sFileName);
-    if(!file)
-    {
-      std::cerr << ">> ERROR: Unable to open file" << std::endl;
-      return;
-    }
-
-    if(file.is_open())
-    {
-      while(!file.eof())
+      case 0:
       {
-        std::string line;
-        std::getline(file, line);
-        int nTabs = countLeadingTabs(line);
-        if(nTabs == 0)
-        {
-          // check if it's a part name or a bracket
-          if(line != "{" || line != "}")
-          {
-            std::cout << ">> Found: " << line << std::endl;
-            // -- separate into multiple files --
-          }
-        }
+        Part* tempPart = m_cPlayerAC->m_rArmUnit;
+        tempPart->load(df,sFileName);
+        m_cPlayerAC->m_vPACParts[tempPart->get_id()] = tempPart;
+        break;
+      }
+      case 1:
+      {
+        Part* tempPart = m_cPlayerAC->m_lArmUnit;
+        tempPart->load(df,sFileName);
+        m_cPlayerAC->m_vPACParts[tempPart->get_id()] = tempPart;
+        break;
+      }
+      case 2:
+      {
+        Part* tempPart = m_cPlayerAC->m_rBackUnit;
+        tempPart->load(df,sFileName);
+        m_cPlayerAC->m_vPACParts[tempPart->get_id()] = tempPart;
+        break;
+      }
+      case 3:
+      {
+        Part* tempPart = m_cPlayerAC->m_lBackUnit;
+        tempPart->load(df,sFileName);
+        m_cPlayerAC->m_vPACParts[tempPart->get_id()] = tempPart;
+        break;
+      }
+      case 4:
+      {
+        Part* tempPart = m_cPlayerAC->m_Head;
+        tempPart->load(df,sFileName);
+        m_cPlayerAC->m_vPACParts[tempPart->get_id()] = tempPart;
+        break;
+      }
+      case 5:
+      {
+        Part* tempPart = m_cPlayerAC->m_Arms;
+        tempPart->load(df,sFileName);
+        m_cPlayerAC->m_vPACParts[tempPart->get_id()] = tempPart;
+        break;
+      }
+      case 6:
+      {
+        Part* tempPart = m_cPlayerAC->m_Core;
+        tempPart->load(df,sFileName);
+        m_cPlayerAC->m_vPACParts[tempPart->get_id()] = tempPart;
+        break;
+      }
+      case 7:
+      {
+        Part* tempPart = m_cPlayerAC->m_Legs;
+        tempPart->load(df,sFileName);
+        m_cPlayerAC->m_vPACParts[tempPart->get_id()] = tempPart;
+        break;
+      }
+      case 8:
+      {
+        Part* tempPart = m_cPlayerAC->m_Booster;
+        tempPart->load(df,sFileName);
+        m_cPlayerAC->m_vPACParts[tempPart->get_id()] = tempPart;
+        break;
+      }
+      case 9:
+      {
+        Part* tempPart = m_cPlayerAC->m_FCS;
+        tempPart->load(df,sFileName);
+        m_cPlayerAC->m_vPACParts[tempPart->get_id()] = tempPart;
+        break;
+      }
+      case 10:
+      {
+        Part* tempPart = m_cPlayerAC->m_Generator;
+        tempPart->load(df,sFileName);
+        m_cPlayerAC->m_vPACParts[tempPart->get_id()] = tempPart;
+        break;
+      }
+      case 11:
+      {
+        Part* tempPart = m_cPlayerAC->m_Expansion;
+        tempPart->load(df,sFileName);
+        m_cPlayerAC->m_vPACParts[tempPart->get_id()] = tempPart;
+        break;
       }
     }
   }
 
-  void read_mech_data(const std::string& sDirName)
+
+  void read_mech_data(Datafile &df, const std::string& sDirName)
   {
     if(!std::filesystem::exists(sDirName))
     {
@@ -128,19 +182,13 @@ class Player
       if(std::filesystem::is_regular_file(entry.status()))
       {
         std::string tempFileName = entry.path();
-        read_file(tempFileName);
+        std::cout << ">> Found file:" << tempFileName << std::endl;
+        load_mech_data(df, tempFileName);
       }
     }
 
   }
 
-  void load_mech_data(Datafile &df, const std::string& sFileName)
-  {
-    m_cPlayerAC->m_vPACParts.erase(m_cPlayerAC->m_vPACParts.begin(),m_cPlayerAC->m_vPACParts.end());
-
-    m_cPlayerAC->m_rArmUnit->load(df,sFileName);
-    
-  }
 
   private:
     std::string m_sPlayerName {};

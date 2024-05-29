@@ -119,7 +119,7 @@ int main()
       }
       case 6:
       {
-        player_1.read_mech_data("AC_saveFile");
+        player_1.read_mech_data(df,"AC_saveFile");
         break;
       }
       case 7:

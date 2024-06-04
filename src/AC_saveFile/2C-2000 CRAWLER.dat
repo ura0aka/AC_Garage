@@ -1,0 +1,20 @@
+2C-2000 CRAWLER
+{
+	Category ID = 7
+	ID = 20
+	Part Name = 2C-2000 CRAWLER
+	Category = Legs
+	Cost = 0
+	Weight = 16300
+	EN Load = 280
+	Manufacturer = RaD
+	Legs
+	{
+		Armor Points = 3650
+		Kinetic Defense = 326
+		Energy Defense = 322
+		Explosive Defense = 337
+	}
+
+}
+

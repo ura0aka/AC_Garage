@@ -1,0 +1,19 @@
+RF-024 TURNER
+{
+	Category ID = 0
+	ID = 1
+	Part Name = RF-024 TURNER
+	Category = Right Arm Unit
+	Cost = 55000
+	Weight = 3560
+	EN Load = 102
+	Manufacturer = Balam Industries
+	Right Arm Unit
+	{
+		Attack Power = 105
+		Impact = 65
+		Total Rounds = 540
+	}
+
+}
+

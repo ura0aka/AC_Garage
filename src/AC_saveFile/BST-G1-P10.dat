@@ -1,0 +1,20 @@
+BST-G1-P10
+{
+	Category ID = 8
+	ID = 22
+	Part Name = BST-G1-P10
+	Category = Booster
+	Cost = 0
+	Weight = 1300
+	EN Load = 130
+	Manufacturer = Furlong Dynamics
+	Booster
+	{
+		Armor Points = 0
+		Kinetic Defense = 0
+		Energy Defense = 0
+		Explosive Defense = 0
+	}
+
+}
+

@@ -1,0 +1,20 @@
+FCS-G1-P01
+{
+	Category ID = 9
+	ID = 24
+	Part Name = FCS-G1-P01
+	Category = FCS
+	Cost = 0
+	Weight = 80
+	EN Load = 198
+	Manufacturer = Furlong Dynamics
+	FCS
+	{
+		Armor Points = 0
+		Kinetic Defense = 0
+		Energy Defense = 0
+		Explosive Defense = 0
+	}
+
+}
+

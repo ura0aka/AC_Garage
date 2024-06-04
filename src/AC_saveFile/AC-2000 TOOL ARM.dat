@@ -1,0 +1,20 @@
+AC-2000 TOOL ARM
+{
+	Category ID = 5
+	ID = 18
+	Part Name = AC-2000 TOOL ARM
+	Category = Arms
+	Cost = 0
+	Weight = 11300
+	EN Load = 216
+	Manufacturer = RaD
+	Arms
+	{
+		Armor Points = 1990
+		Kinetic Defense = 207
+		Energy Defense = 204
+		Explosive Defense = 209
+	}
+
+}
+

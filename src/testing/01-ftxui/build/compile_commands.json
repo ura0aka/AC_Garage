@@ -1,0 +1,352 @@
+[
+{
+  "directory": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-build",
+  "command": "/usr/bin/c++  -I/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src -I/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include  -o CMakeFiles/screen.dir/src/ftxui/screen/box.cpp.o -c /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/screen/box.cpp",
+  "file": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/screen/box.cpp"
+},
+{
+  "directory": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-build",
+  "command": "/usr/bin/c++  -I/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src -I/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include  -o CMakeFiles/screen.dir/src/ftxui/screen/color.cpp.o -c /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/screen/color.cpp",
+  "file": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/screen/color.cpp"
+},
+{
+  "directory": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-build",
+  "command": "/usr/bin/c++  -I/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src -I/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include  -o CMakeFiles/screen.dir/src/ftxui/screen/color_info.cpp.o -c /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/screen/color_info.cpp",
+  "file": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/screen/color_info.cpp"
+},
+{
+  "directory": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-build",
+  "command": "/usr/bin/c++  -I/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src -I/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include  -o CMakeFiles/screen.dir/src/ftxui/screen/image.cpp.o -c /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/screen/image.cpp",
+  "file": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/screen/image.cpp"
+},
+{
+  "directory": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-build",
+  "command": "/usr/bin/c++  -I/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src -I/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include  -o CMakeFiles/screen.dir/src/ftxui/screen/screen.cpp.o -c /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/screen/screen.cpp",
+  "file": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/screen/screen.cpp"
+},
+{
+  "directory": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-build",
+  "command": "/usr/bin/c++  -I/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src -I/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include  -o CMakeFiles/screen.dir/src/ftxui/screen/string.cpp.o -c /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/screen/string.cpp",
+  "file": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/screen/string.cpp"
+},
+{
+  "directory": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-build",
+  "command": "/usr/bin/c++  -I/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src -I/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include  -o CMakeFiles/screen.dir/src/ftxui/screen/terminal.cpp.o -c /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/screen/terminal.cpp",
+  "file": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/screen/terminal.cpp"
+},
+{
+  "directory": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-build",
+  "command": "/usr/bin/c++  -I/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src -isystem /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include  -o CMakeFiles/dom.dir/src/ftxui/dom/automerge.cpp.o -c /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/dom/automerge.cpp",
+  "file": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/dom/automerge.cpp"
+},
+{
+  "directory": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-build",
+  "command": "/usr/bin/c++  -I/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src -isystem /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include  -o CMakeFiles/dom.dir/src/ftxui/dom/blink.cpp.o -c /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/dom/blink.cpp",
+  "file": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/dom/blink.cpp"
+},
+{
+  "directory": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-build",
+  "command": "/usr/bin/c++  -I/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src -isystem /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include  -o CMakeFiles/dom.dir/src/ftxui/dom/bold.cpp.o -c /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/dom/bold.cpp",
+  "file": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/dom/bold.cpp"
+},
+{
+  "directory": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-build",
+  "command": "/usr/bin/c++  -I/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src -isystem /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include  -o CMakeFiles/dom.dir/src/ftxui/dom/hyperlink.cpp.o -c /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/dom/hyperlink.cpp",
+  "file": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/dom/hyperlink.cpp"
+},
+{
+  "directory": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-build",
+  "command": "/usr/bin/c++  -I/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src -isystem /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include  -o CMakeFiles/dom.dir/src/ftxui/dom/border.cpp.o -c /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/dom/border.cpp",
+  "file": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/dom/border.cpp"
+},
+{
+  "directory": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-build",
+  "command": "/usr/bin/c++  -I/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src -isystem /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include  -o CMakeFiles/dom.dir/src/ftxui/dom/box_helper.cpp.o -c /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/dom/box_helper.cpp",
+  "file": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/dom/box_helper.cpp"
+},
+{
+  "directory": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-build",
+  "command": "/usr/bin/c++  -I/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src -isystem /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include  -o CMakeFiles/dom.dir/src/ftxui/dom/canvas.cpp.o -c /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/dom/canvas.cpp",
+  "file": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/dom/canvas.cpp"
+},
+{
+  "directory": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-build",
+  "command": "/usr/bin/c++  -I/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src -isystem /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include  -o CMakeFiles/dom.dir/src/ftxui/dom/clear_under.cpp.o -c /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/dom/clear_under.cpp",
+  "file": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/dom/clear_under.cpp"
+},
+{
+  "directory": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-build",
+  "command": "/usr/bin/c++  -I/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src -isystem /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include  -o CMakeFiles/dom.dir/src/ftxui/dom/color.cpp.o -c /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/dom/color.cpp",
+  "file": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/dom/color.cpp"
+},
+{
+  "directory": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-build",
+  "command": "/usr/bin/c++  -I/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src -isystem /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include  -o CMakeFiles/dom.dir/src/ftxui/dom/composite_decorator.cpp.o -c /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/dom/composite_decorator.cpp",
+  "file": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/dom/composite_decorator.cpp"
+},
+{
+  "directory": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-build",
+  "command": "/usr/bin/c++  -I/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src -isystem /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include  -o CMakeFiles/dom.dir/src/ftxui/dom/dbox.cpp.o -c /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/dom/dbox.cpp",
+  "file": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/dom/dbox.cpp"
+},
+{
+  "directory": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-build",
+  "command": "/usr/bin/c++  -I/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src -isystem /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include  -o CMakeFiles/dom.dir/src/ftxui/dom/dim.cpp.o -c /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/dom/dim.cpp",
+  "file": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/dom/dim.cpp"
+},
+{
+  "directory": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-build",
+  "command": "/usr/bin/c++  -I/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src -isystem /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include  -o CMakeFiles/dom.dir/src/ftxui/dom/flex.cpp.o -c /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/dom/flex.cpp",
+  "file": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/dom/flex.cpp"
+},
+{
+  "directory": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-build",
+  "command": "/usr/bin/c++  -I/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src -isystem /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include  -o CMakeFiles/dom.dir/src/ftxui/dom/flexbox.cpp.o -c /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/dom/flexbox.cpp",
+  "file": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/dom/flexbox.cpp"
+},
+{
+  "directory": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-build",
+  "command": "/usr/bin/c++  -I/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src -isystem /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include  -o CMakeFiles/dom.dir/src/ftxui/dom/flexbox_config.cpp.o -c /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/dom/flexbox_config.cpp",
+  "file": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/dom/flexbox_config.cpp"
+},
+{
+  "directory": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-build",
+  "command": "/usr/bin/c++  -I/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src -isystem /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include  -o CMakeFiles/dom.dir/src/ftxui/dom/flexbox_helper.cpp.o -c /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/dom/flexbox_helper.cpp",
+  "file": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/dom/flexbox_helper.cpp"
+},
+{
+  "directory": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-build",
+  "command": "/usr/bin/c++  -I/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src -isystem /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include  -o CMakeFiles/dom.dir/src/ftxui/dom/focus.cpp.o -c /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/dom/focus.cpp",
+  "file": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/dom/focus.cpp"
+},
+{
+  "directory": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-build",
+  "command": "/usr/bin/c++  -I/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src -isystem /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include  -o CMakeFiles/dom.dir/src/ftxui/dom/frame.cpp.o -c /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/dom/frame.cpp",
+  "file": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/dom/frame.cpp"
+},
+{
+  "directory": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-build",
+  "command": "/usr/bin/c++  -I/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src -isystem /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include  -o CMakeFiles/dom.dir/src/ftxui/dom/gauge.cpp.o -c /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/dom/gauge.cpp",
+  "file": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/dom/gauge.cpp"
+},
+{
+  "directory": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-build",
+  "command": "/usr/bin/c++  -I/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src -isystem /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include  -o CMakeFiles/dom.dir/src/ftxui/dom/graph.cpp.o -c /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/dom/graph.cpp",
+  "file": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/dom/graph.cpp"
+},
+{
+  "directory": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-build",
+  "command": "/usr/bin/c++  -I/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src -isystem /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include  -o CMakeFiles/dom.dir/src/ftxui/dom/gridbox.cpp.o -c /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/dom/gridbox.cpp",
+  "file": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/dom/gridbox.cpp"
+},
+{
+  "directory": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-build",
+  "command": "/usr/bin/c++  -I/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src -isystem /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include  -o CMakeFiles/dom.dir/src/ftxui/dom/hbox.cpp.o -c /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/dom/hbox.cpp",
+  "file": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/dom/hbox.cpp"
+},
+{
+  "directory": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-build",
+  "command": "/usr/bin/c++  -I/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src -isystem /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include  -o CMakeFiles/dom.dir/src/ftxui/dom/inverted.cpp.o -c /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/dom/inverted.cpp",
+  "file": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/dom/inverted.cpp"
+},
+{
+  "directory": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-build",
+  "command": "/usr/bin/c++  -I/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src -isystem /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include  -o CMakeFiles/dom.dir/src/ftxui/dom/linear_gradient.cpp.o -c /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/dom/linear_gradient.cpp",
+  "file": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/dom/linear_gradient.cpp"
+},
+{
+  "directory": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-build",
+  "command": "/usr/bin/c++  -I/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src -isystem /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include  -o CMakeFiles/dom.dir/src/ftxui/dom/node.cpp.o -c /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/dom/node.cpp",
+  "file": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/dom/node.cpp"
+},
+{
+  "directory": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-build",
+  "command": "/usr/bin/c++  -I/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src -isystem /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include  -o CMakeFiles/dom.dir/src/ftxui/dom/node_decorator.cpp.o -c /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/dom/node_decorator.cpp",
+  "file": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/dom/node_decorator.cpp"
+},
+{
+  "directory": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-build",
+  "command": "/usr/bin/c++  -I/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src -isystem /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include  -o CMakeFiles/dom.dir/src/ftxui/dom/paragraph.cpp.o -c /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/dom/paragraph.cpp",
+  "file": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/dom/paragraph.cpp"
+},
+{
+  "directory": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-build",
+  "command": "/usr/bin/c++  -I/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src -isystem /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include  -o CMakeFiles/dom.dir/src/ftxui/dom/reflect.cpp.o -c /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/dom/reflect.cpp",
+  "file": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/dom/reflect.cpp"
+},
+{
+  "directory": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-build",
+  "command": "/usr/bin/c++  -I/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src -isystem /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include  -o CMakeFiles/dom.dir/src/ftxui/dom/scroll_indicator.cpp.o -c /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/dom/scroll_indicator.cpp",
+  "file": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/dom/scroll_indicator.cpp"
+},
+{
+  "directory": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-build",
+  "command": "/usr/bin/c++  -I/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src -isystem /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include  -o CMakeFiles/dom.dir/src/ftxui/dom/separator.cpp.o -c /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/dom/separator.cpp",
+  "file": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/dom/separator.cpp"
+},
+{
+  "directory": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-build",
+  "command": "/usr/bin/c++  -I/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src -isystem /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include  -o CMakeFiles/dom.dir/src/ftxui/dom/size.cpp.o -c /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/dom/size.cpp",
+  "file": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/dom/size.cpp"
+},
+{
+  "directory": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-build",
+  "command": "/usr/bin/c++  -I/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src -isystem /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include  -o CMakeFiles/dom.dir/src/ftxui/dom/spinner.cpp.o -c /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/dom/spinner.cpp",
+  "file": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/dom/spinner.cpp"
+},
+{
+  "directory": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-build",
+  "command": "/usr/bin/c++  -I/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src -isystem /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include  -o CMakeFiles/dom.dir/src/ftxui/dom/strikethrough.cpp.o -c /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/dom/strikethrough.cpp",
+  "file": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/dom/strikethrough.cpp"
+},
+{
+  "directory": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-build",
+  "command": "/usr/bin/c++  -I/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src -isystem /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include  -o CMakeFiles/dom.dir/src/ftxui/dom/table.cpp.o -c /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/dom/table.cpp",
+  "file": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/dom/table.cpp"
+},
+{
+  "directory": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-build",
+  "command": "/usr/bin/c++  -I/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src -isystem /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include  -o CMakeFiles/dom.dir/src/ftxui/dom/text.cpp.o -c /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/dom/text.cpp",
+  "file": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/dom/text.cpp"
+},
+{
+  "directory": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-build",
+  "command": "/usr/bin/c++  -I/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src -isystem /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include  -o CMakeFiles/dom.dir/src/ftxui/dom/underlined.cpp.o -c /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/dom/underlined.cpp",
+  "file": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/dom/underlined.cpp"
+},
+{
+  "directory": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-build",
+  "command": "/usr/bin/c++  -I/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src -isystem /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include  -o CMakeFiles/dom.dir/src/ftxui/dom/underlined_double.cpp.o -c /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/dom/underlined_double.cpp",
+  "file": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/dom/underlined_double.cpp"
+},
+{
+  "directory": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-build",
+  "command": "/usr/bin/c++  -I/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src -isystem /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include  -o CMakeFiles/dom.dir/src/ftxui/dom/util.cpp.o -c /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/dom/util.cpp",
+  "file": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/dom/util.cpp"
+},
+{
+  "directory": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-build",
+  "command": "/usr/bin/c++  -I/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src -isystem /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include  -o CMakeFiles/dom.dir/src/ftxui/dom/vbox.cpp.o -c /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/dom/vbox.cpp",
+  "file": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/dom/vbox.cpp"
+},
+{
+  "directory": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-build",
+  "command": "/usr/bin/c++  -I/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src -isystem /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include  -o CMakeFiles/component.dir/src/ftxui/component/animation.cpp.o -c /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/component/animation.cpp",
+  "file": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/component/animation.cpp"
+},
+{
+  "directory": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-build",
+  "command": "/usr/bin/c++  -I/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src -isystem /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include  -o CMakeFiles/component.dir/src/ftxui/component/button.cpp.o -c /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/component/button.cpp",
+  "file": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/component/button.cpp"
+},
+{
+  "directory": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-build",
+  "command": "/usr/bin/c++  -I/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src -isystem /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include  -o CMakeFiles/component.dir/src/ftxui/component/catch_event.cpp.o -c /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/component/catch_event.cpp",
+  "file": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/component/catch_event.cpp"
+},
+{
+  "directory": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-build",
+  "command": "/usr/bin/c++  -I/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src -isystem /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include  -o CMakeFiles/component.dir/src/ftxui/component/checkbox.cpp.o -c /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/component/checkbox.cpp",
+  "file": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/component/checkbox.cpp"
+},
+{
+  "directory": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-build",
+  "command": "/usr/bin/c++  -I/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src -isystem /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include  -o CMakeFiles/component.dir/src/ftxui/component/collapsible.cpp.o -c /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/component/collapsible.cpp",
+  "file": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/component/collapsible.cpp"
+},
+{
+  "directory": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-build",
+  "command": "/usr/bin/c++  -I/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src -isystem /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include  -o CMakeFiles/component.dir/src/ftxui/component/component.cpp.o -c /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/component/component.cpp",
+  "file": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/component/component.cpp"
+},
+{
+  "directory": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-build",
+  "command": "/usr/bin/c++  -I/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src -isystem /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include  -o CMakeFiles/component.dir/src/ftxui/component/component_options.cpp.o -c /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/component/component_options.cpp",
+  "file": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/component/component_options.cpp"
+},
+{
+  "directory": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-build",
+  "command": "/usr/bin/c++  -I/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src -isystem /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include  -o CMakeFiles/component.dir/src/ftxui/component/container.cpp.o -c /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/component/container.cpp",
+  "file": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/component/container.cpp"
+},
+{
+  "directory": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-build",
+  "command": "/usr/bin/c++  -I/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src -isystem /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include  -o CMakeFiles/component.dir/src/ftxui/component/dropdown.cpp.o -c /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/component/dropdown.cpp",
+  "file": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/component/dropdown.cpp"
+},
+{
+  "directory": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-build",
+  "command": "/usr/bin/c++  -I/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src -isystem /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include  -o CMakeFiles/component.dir/src/ftxui/component/event.cpp.o -c /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/component/event.cpp",
+  "file": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/component/event.cpp"
+},
+{
+  "directory": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-build",
+  "command": "/usr/bin/c++  -I/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src -isystem /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include  -o CMakeFiles/component.dir/src/ftxui/component/hoverable.cpp.o -c /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/component/hoverable.cpp",
+  "file": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/component/hoverable.cpp"
+},
+{
+  "directory": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-build",
+  "command": "/usr/bin/c++  -I/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src -isystem /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include  -o CMakeFiles/component.dir/src/ftxui/component/input.cpp.o -c /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/component/input.cpp",
+  "file": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/component/input.cpp"
+},
+{
+  "directory": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-build",
+  "command": "/usr/bin/c++  -I/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src -isystem /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include  -o CMakeFiles/component.dir/src/ftxui/component/loop.cpp.o -c /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/component/loop.cpp",
+  "file": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/component/loop.cpp"
+},
+{
+  "directory": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-build",
+  "command": "/usr/bin/c++  -I/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src -isystem /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include  -o CMakeFiles/component.dir/src/ftxui/component/maybe.cpp.o -c /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/component/maybe.cpp",
+  "file": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/component/maybe.cpp"
+},
+{
+  "directory": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-build",
+  "command": "/usr/bin/c++  -I/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src -isystem /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include  -o CMakeFiles/component.dir/src/ftxui/component/menu.cpp.o -c /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/component/menu.cpp",
+  "file": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/component/menu.cpp"
+},
+{
+  "directory": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-build",
+  "command": "/usr/bin/c++  -I/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src -isystem /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include  -o CMakeFiles/component.dir/src/ftxui/component/modal.cpp.o -c /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/component/modal.cpp",
+  "file": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/component/modal.cpp"
+},
+{
+  "directory": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-build",
+  "command": "/usr/bin/c++  -I/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src -isystem /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include  -o CMakeFiles/component.dir/src/ftxui/component/radiobox.cpp.o -c /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/component/radiobox.cpp",
+  "file": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/component/radiobox.cpp"
+},
+{
+  "directory": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-build",
+  "command": "/usr/bin/c++  -I/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src -isystem /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include  -o CMakeFiles/component.dir/src/ftxui/component/renderer.cpp.o -c /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/component/renderer.cpp",
+  "file": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/component/renderer.cpp"
+},
+{
+  "directory": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-build",
+  "command": "/usr/bin/c++  -I/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src -isystem /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include  -o CMakeFiles/component.dir/src/ftxui/component/resizable_split.cpp.o -c /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/component/resizable_split.cpp",
+  "file": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/component/resizable_split.cpp"
+},
+{
+  "directory": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-build",
+  "command": "/usr/bin/c++  -I/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src -isystem /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include  -o CMakeFiles/component.dir/src/ftxui/component/screen_interactive.cpp.o -c /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/component/screen_interactive.cpp",
+  "file": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/component/screen_interactive.cpp"
+},
+{
+  "directory": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-build",
+  "command": "/usr/bin/c++  -I/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src -isystem /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include  -o CMakeFiles/component.dir/src/ftxui/component/slider.cpp.o -c /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/component/slider.cpp",
+  "file": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/component/slider.cpp"
+},
+{
+  "directory": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-build",
+  "command": "/usr/bin/c++  -I/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src -isystem /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include  -o CMakeFiles/component.dir/src/ftxui/component/terminal_input_parser.cpp.o -c /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/component/terminal_input_parser.cpp",
+  "file": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/component/terminal_input_parser.cpp"
+},
+{
+  "directory": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-build",
+  "command": "/usr/bin/c++  -I/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src -isystem /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include  -o CMakeFiles/component.dir/src/ftxui/component/util.cpp.o -c /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/component/util.cpp",
+  "file": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/component/util.cpp"
+},
+{
+  "directory": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-build",
+  "command": "/usr/bin/c++  -I/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src -isystem /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include  -o CMakeFiles/component.dir/src/ftxui/component/window.cpp.o -c /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/component/window.cpp",
+  "file": "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/component/window.cpp"
+}
+]

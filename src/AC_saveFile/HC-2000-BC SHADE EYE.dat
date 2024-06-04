@@ -1,0 +1,20 @@
+HC-2000-BC SHADE EYE
+{
+	Category ID = 4
+	ID = 13
+	Part Name = HC-2000-BC SHADE EYE
+	Category = Head
+	Cost = 147000
+	Weight = 3090
+	EN Load = 163
+	Manufacturer = RaD
+	Head
+	{
+		Armor Points = 770
+		Kinetic Defense = 174
+		Energy Defense = 167
+		Explosive Defense = 181
+	}
+
+}
+

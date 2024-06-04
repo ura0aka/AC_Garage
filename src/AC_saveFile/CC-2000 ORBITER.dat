@@ -1,0 +1,20 @@
+CC-2000 ORBITER
+{
+	Category ID = 6
+	ID = 15
+	Part Name = CC-2000 ORBITER
+	Category = Core
+	Cost = 0
+	Weight = 12650
+	EN Load = 267
+	Manufacturer = RaD
+	Core
+	{
+		Armor Points = 2780
+		Kinetic Defense = 393
+		Energy Defense = 366
+		Explosive Defense = 374
+	}
+
+}
+

@@ -1,0 +1,20 @@
+ASSAULT ARMOR
+{
+	Category ID = 11
+	ID = 27
+	Part Name = ASSAULT ARMOR
+	Category = Expansion
+	Cost = 0
+	Weight = 0
+	EN Load = 0
+	Manufacturer = -
+	Expansion
+	{
+		Armor Points = 0
+		Kinetic Defense = 0
+		Energy Defense = 0
+		Explosive Defense = 0
+	}
+
+}
+

@@ -1,0 +1,19 @@
+BML-G2-P03MLT-06
+{
+	Category ID = 3
+	ID = 12
+	Part Name = BML-G2-P03MLT-06
+	Category = Left Back Unit
+	Cost = 111000
+	Weight = 3840
+	EN Load = 241
+	Manufacturer = Furlong Dynamics
+	Left Back Unit
+	{
+		Attack Power = 618
+		Impact = 432
+		Total Rounds = 228
+	}
+
+}
+

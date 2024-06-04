@@ -1,0 +1,19 @@
+VVC-774LS
+{
+	Category ID = 1
+	ID = 4
+	Part Name = VVC-774LS
+	Category = Left Arm Unit
+	Cost = 339000
+	Weight = 3260
+	EN Load = 328
+	Manufacturer = VCPL
+	Left Arm Unit
+	{
+		Attack Power = 1615
+		Impact = 900
+		Total Rounds = 0
+	}
+
+}
+

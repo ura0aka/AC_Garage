@@ -1,0 +1,19 @@
+VE-60SNA
+{
+	Category ID = 2
+	ID = 8
+	Part Name = VE-60SNA
+	Category = Right Back Unit
+	Cost = 283000
+	Weight = 6150
+	EN Load = 826
+	Manufacturer = Arquebus ADD
+	Right Back Unit
+	{
+		Attack Power = 1058
+		Impact = 807
+		Total Rounds = 30
+	}
+
+}
+

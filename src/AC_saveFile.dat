@@ -1,0 +1,236 @@
+SG-027 ZIMMERMAN
+{
+	Category ID = 0
+	ID = 2
+	Part Name = SG-027 ZIMMERMAN
+	Category = Right Arm Unit
+	Cost = 115000
+	Weight = 4400
+	EN Load = 242
+	Manufacturer = Balam Industries
+	Right Arm Unit
+	{
+		Attack Power = 900
+		Impact = 840
+		Total Rounds = 53
+	}
+
+}
+
+VVC-774LS
+{
+	Category ID = 1
+	ID = 4
+	Part Name = VVC-774LS
+	Category = Left Arm Unit
+	Cost = 339000
+	Weight = 3260
+	EN Load = 328
+	Manufacturer = VCPL
+	Left Arm Unit
+	{
+		Attack Power = 1615
+		Impact = 900
+		Total Rounds = 0
+	}
+
+}
+
+VE-60SNA
+{
+	Category ID = 2
+	ID = 8
+	Part Name = VE-60SNA
+	Category = Right Back Unit
+	Cost = 283000
+	Weight = 6150
+	EN Load = 826
+	Manufacturer = Arquebus ADD
+	Right Back Unit
+	{
+		Attack Power = 1058
+		Impact = 807
+		Total Rounds = 30
+	}
+
+}
+
+BML-G2/P03MLT-06
+{
+	Category ID = 3
+	ID = 12
+	Part Name = BML-G2/P03MLT-06
+	Category = Left Back Unit
+	Cost = 111000
+	Weight = 3840
+	EN Load = 241
+	Manufacturer = Furlong Dynamics
+	Left Back Unit
+	{
+		Attack Power = 618
+		Impact = 432
+		Total Rounds = 228
+	}
+
+}
+
+HC-2000/BC SHADE EYE
+{
+	Category ID = 4
+	ID = 13
+	Part Name = HC-2000/BC SHADE EYE
+	Category = Head
+	Cost = 147000
+	Weight = 3090
+	EN Load = 163
+	Manufacturer = RaD
+	Head
+	{
+		Armor Points = 770
+		Kinetic Defense = 174
+		Energy Defense = 167
+		Explosive Defense = 181
+	}
+
+}
+
+EL-PC-00 ALBA
+{
+	Category ID = 6
+	ID = 16
+	Part Name = EL-PC-00 ALBA
+	Category = Core
+	Cost = 531000
+	Weight = 12000
+	EN Load = 315
+	Manufacturer = Elcano
+	Core
+	{
+		Armor Points = 2850
+		Kinetic Defense = 370
+		Energy Defense = 370
+		Explosive Defense = 370
+	}
+
+}
+
+AC-2000 TOOL ARM
+{
+	Category ID = 5
+	ID = 18
+	Part Name = AC-2000 TOOL ARM
+	Category = Arms
+	Cost = 0
+	Weight = 11300
+	EN Load = 216
+	Manufacturer = RaD
+	Arms
+	{
+		Armor Points = 1990
+		Kinetic Defense = 207
+		Energy Defense = 204
+		Explosive Defense = 209
+	}
+
+}
+
+2C-2000 CRAWLER
+{
+	Category ID = 7
+	ID = 20
+	Part Name = 2C-2000 CRAWLER
+	Category = Legs
+	Cost = 0
+	Weight = 16300
+	EN Load = 280
+	Manufacturer = RaD
+	Legs
+	{
+		Armor Points = 3650
+		Kinetic Defense = 326
+		Energy Defense = 322
+		Explosive Defense = 337
+	}
+
+}
+
+BST-G1/P10
+{
+	Category ID = 8
+	ID = 22
+	Part Name = BST-G1/P10
+	Category = Booster
+	Cost = 0
+	Weight = 1300
+	EN Load = 130
+	Manufacturer = Furlong Dynamics
+	Booster
+	{
+		Armor Points = 0
+		Kinetic Defense = 0
+		Energy Defense = 0
+		Explosive Defense = 0
+	}
+
+}
+
+FCS-G1/P01
+{
+	Category ID = 9
+	ID = 24
+	Part Name = FCS-G1/P01
+	Category = FCS
+	Cost = 0
+	Weight = 80
+	EN Load = 198
+	Manufacturer = Furlong Dynamics
+	FCS
+	{
+		Armor Points = 0
+		Kinetic Defense = 0
+		Energy Defense = 0
+		Explosive Defense = 0
+	}
+
+}
+
+AG-J-098 JOSO
+{
+	Category ID = 10
+	ID = 26
+	Part Name = AG-J-098 JOSO
+	Category = Generator
+	Cost = 0
+	Weight = 3420
+	EN Load = 2600
+	Manufacturer = BAWS
+	Generator
+	{
+		Armor Points = 0
+		Kinetic Defense = 0
+		Energy Defense = 0
+		Explosive Defense = 0
+	}
+
+}
+
+ASSAULT ARMOR
+{
+	Category ID = 11
+	ID = 27
+	Part Name = ASSAULT ARMOR
+	Category = Expansion
+	Cost = 0
+	Weight = 0
+	EN Load = 0
+	Manufacturer = -
+	Expansion
+	{
+		Armor Points = 0
+		Kinetic Defense = 0
+		Energy Defense = 0
+		Explosive Defense = 0
+	}
+
+}
+

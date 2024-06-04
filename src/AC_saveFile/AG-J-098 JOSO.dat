@@ -1,0 +1,20 @@
+AG-J-098 JOSO
+{
+	Category ID = 10
+	ID = 26
+	Part Name = AG-J-098 JOSO
+	Category = Generator
+	Cost = 0
+	Weight = 3420
+	EN Load = 2600
+	Manufacturer = BAWS
+	Generator
+	{
+		Armor Points = 0
+		Kinetic Defense = 0
+		Energy Defense = 0
+		Explosive Defense = 0
+	}
+
+}
+

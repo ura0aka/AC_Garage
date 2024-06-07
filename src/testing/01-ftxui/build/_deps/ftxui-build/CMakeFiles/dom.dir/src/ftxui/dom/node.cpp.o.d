@@ -1,7 +1,7 @@
 _deps/ftxui-build/CMakeFiles/dom.dir/src/ftxui/dom/node.cpp.o: \
- /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/dom/node.cpp \
+ /home/max/Code/MiniProjects/ACGarage/src/testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/dom/node.cpp \
  /usr/include/stdc-predef.h \
- /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include/ftxui/screen/box.hpp \
+ /home/max/Code/MiniProjects/ACGarage/src/testing/01-ftxui/build/_deps/ftxui-src/include/ftxui/screen/box.hpp \
  /usr/include/c++/12/utility \
  /usr/include/x86_64-linux-gnu/c++/12/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/12/bits/os_defines.h \
@@ -18,7 +18,7 @@ _deps/ftxui-build/CMakeFiles/dom.dir/src/ftxui/dom/node.cpp.o: \
  /usr/include/c++/12/bits/stl_pair.h /usr/include/c++/12/type_traits \
  /usr/include/c++/12/bits/move.h /usr/include/c++/12/bits/utility.h \
  /usr/include/c++/12/initializer_list \
- /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include/ftxui/dom/node.hpp \
+ /home/max/Code/MiniProjects/ACGarage/src/testing/01-ftxui/build/_deps/ftxui-src/include/ftxui/dom/node.hpp \
  /usr/include/c++/12/memory /usr/include/c++/12/bits/stl_algobase.h \
  /usr/include/c++/12/bits/functexcept.h \
  /usr/include/c++/12/bits/exception_defines.h \
@@ -122,8 +122,8 @@ _deps/ftxui-build/CMakeFiles/dom.dir/src/ftxui/dom/node.cpp.o: \
  /usr/include/c++/12/bits/stl_bvector.h \
  /usr/include/c++/12/bits/range_access.h \
  /usr/include/c++/12/bits/vector.tcc \
- /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include/ftxui/dom/requirement.hpp \
- /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include/ftxui/screen/screen.hpp \
+ /home/max/Code/MiniProjects/ACGarage/src/testing/01-ftxui/build/_deps/ftxui-src/include/ftxui/dom/requirement.hpp \
+ /home/max/Code/MiniProjects/ACGarage/src/testing/01-ftxui/build/_deps/ftxui-src/include/ftxui/screen/screen.hpp \
  /usr/include/c++/12/cstdint /usr/include/c++/12/string \
  /usr/include/c++/12/bits/char_traits.h \
  /usr/include/c++/12/bits/localefwd.h \
@@ -157,7 +157,7 @@ _deps/ftxui-build/CMakeFiles/dom.dir/src/ftxui/dom/node.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/types/error_t.h \
  /usr/include/c++/12/bits/charconv.h \
  /usr/include/c++/12/bits/basic_string.tcc \
- /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include/ftxui/screen/image.hpp \
- /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include/ftxui/screen/pixel.hpp \
- /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include/ftxui/screen/color.hpp \
- /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include/ftxui/screen/terminal.hpp
+ /home/max/Code/MiniProjects/ACGarage/src/testing/01-ftxui/build/_deps/ftxui-src/include/ftxui/screen/image.hpp \
+ /home/max/Code/MiniProjects/ACGarage/src/testing/01-ftxui/build/_deps/ftxui-src/include/ftxui/screen/pixel.hpp \
+ /home/max/Code/MiniProjects/ACGarage/src/testing/01-ftxui/build/_deps/ftxui-src/include/ftxui/screen/color.hpp \
+ /home/max/Code/MiniProjects/ACGarage/src/testing/01-ftxui/build/_deps/ftxui-src/include/ftxui/screen/terminal.hpp

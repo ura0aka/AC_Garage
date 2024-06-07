@@ -1,5 +1,5 @@
 _deps/ftxui-build/CMakeFiles/dom.dir/src/ftxui/dom/border.cpp.o: \
- /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/dom/border.cpp \
+ /home/max/Code/MiniProjects/ACGarage/src/testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/dom/border.cpp \
  /usr/include/stdc-predef.h /usr/include/c++/12/algorithm \
  /usr/include/c++/12/bits/stl_algobase.h \
  /usr/include/x86_64-linux-gnu/c++/12/bits/c++config.h \
@@ -73,7 +73,7 @@ _deps/ftxui-build/CMakeFiles/dom.dir/src/ftxui/dom/border.cpp.o: \
  /usr/include/c++/12/pstl/glue_algorithm_defs.h \
  /usr/include/c++/12/pstl/execution_defs.h /usr/include/c++/12/array \
  /usr/include/c++/12/compare /usr/include/c++/12/bits/range_access.h \
- /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include/ftxui/screen/color.hpp \
+ /home/max/Code/MiniProjects/ACGarage/src/testing/01-ftxui/build/_deps/ftxui-src/include/ftxui/screen/color.hpp \
  /usr/include/c++/12/cstdint \
  /usr/lib/gcc/x86_64-linux-gnu/12/include/stdint.h /usr/include/stdint.h \
  /usr/include/x86_64-linux-gnu/bits/wchar.h \
@@ -159,27 +159,27 @@ _deps/ftxui-build/CMakeFiles/dom.dir/src/ftxui/dom/border.cpp.o: \
  /usr/include/c++/12/vector /usr/include/c++/12/bits/stl_vector.h \
  /usr/include/c++/12/bits/stl_bvector.h \
  /usr/include/c++/12/bits/vector.tcc \
- /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include/ftxui/dom/elements.hpp \
+ /home/max/Code/MiniProjects/ACGarage/src/testing/01-ftxui/build/_deps/ftxui-src/include/ftxui/dom/elements.hpp \
  /usr/include/c++/12/functional /usr/include/c++/12/bits/std_function.h \
  /usr/include/c++/12/unordered_map /usr/include/c++/12/bits/hashtable.h \
  /usr/include/c++/12/bits/hashtable_policy.h \
  /usr/include/c++/12/bits/node_handle.h \
  /usr/include/c++/12/bits/unordered_map.h \
  /usr/include/c++/12/bits/erase_if.h \
- /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include/ftxui/dom/canvas.hpp \
+ /home/max/Code/MiniProjects/ACGarage/src/testing/01-ftxui/build/_deps/ftxui-src/include/ftxui/dom/canvas.hpp \
  /usr/include/c++/12/cstddef \
- /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include/ftxui/screen/image.hpp \
- /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include/ftxui/screen/box.hpp \
- /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include/ftxui/screen/pixel.hpp \
- /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include/ftxui/dom/direction.hpp \
- /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include/ftxui/dom/flexbox_config.hpp \
- /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include/ftxui/dom/linear_gradient.hpp \
- /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include/ftxui/dom/node.hpp \
- /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include/ftxui/dom/requirement.hpp \
- /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include/ftxui/screen/screen.hpp \
- /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include/ftxui/screen/terminal.hpp \
- /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include/ftxui/util/ref.hpp \
- /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include/ftxui/screen/string.hpp \
+ /home/max/Code/MiniProjects/ACGarage/src/testing/01-ftxui/build/_deps/ftxui-src/include/ftxui/screen/image.hpp \
+ /home/max/Code/MiniProjects/ACGarage/src/testing/01-ftxui/build/_deps/ftxui-src/include/ftxui/screen/box.hpp \
+ /home/max/Code/MiniProjects/ACGarage/src/testing/01-ftxui/build/_deps/ftxui-src/include/ftxui/screen/pixel.hpp \
+ /home/max/Code/MiniProjects/ACGarage/src/testing/01-ftxui/build/_deps/ftxui-src/include/ftxui/dom/direction.hpp \
+ /home/max/Code/MiniProjects/ACGarage/src/testing/01-ftxui/build/_deps/ftxui-src/include/ftxui/dom/flexbox_config.hpp \
+ /home/max/Code/MiniProjects/ACGarage/src/testing/01-ftxui/build/_deps/ftxui-src/include/ftxui/dom/linear_gradient.hpp \
+ /home/max/Code/MiniProjects/ACGarage/src/testing/01-ftxui/build/_deps/ftxui-src/include/ftxui/dom/node.hpp \
+ /home/max/Code/MiniProjects/ACGarage/src/testing/01-ftxui/build/_deps/ftxui-src/include/ftxui/dom/requirement.hpp \
+ /home/max/Code/MiniProjects/ACGarage/src/testing/01-ftxui/build/_deps/ftxui-src/include/ftxui/screen/screen.hpp \
+ /home/max/Code/MiniProjects/ACGarage/src/testing/01-ftxui/build/_deps/ftxui-src/include/ftxui/screen/terminal.hpp \
+ /home/max/Code/MiniProjects/ACGarage/src/testing/01-ftxui/build/_deps/ftxui-src/include/ftxui/util/ref.hpp \
+ /home/max/Code/MiniProjects/ACGarage/src/testing/01-ftxui/build/_deps/ftxui-src/include/ftxui/screen/string.hpp \
  /usr/include/c++/12/variant /usr/include/c++/12/bits/parse_numbers.h \
- /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include/ftxui/dom/take_any_args.hpp \
- /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include/ftxui/dom/deprecated.hpp
+ /home/max/Code/MiniProjects/ACGarage/src/testing/01-ftxui/build/_deps/ftxui-src/include/ftxui/dom/take_any_args.hpp \
+ /home/max/Code/MiniProjects/ACGarage/src/testing/01-ftxui/build/_deps/ftxui-src/include/ftxui/dom/deprecated.hpp

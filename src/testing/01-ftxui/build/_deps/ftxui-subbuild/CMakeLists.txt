@@ -22,8 +22,8 @@ set_property(GLOBAL PROPERTY _CMAKE_FindGit_GIT_EXECUTABLE_VERSION
 include(ExternalProject)
 ExternalProject_Add(ftxui-populate
                      "UPDATE_DISCONNECTED" "True" "GIT_REPOSITORY" "/opt/ftxui" "GIT_TAG" "origin/main"
-                    SOURCE_DIR          "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src"
-                    BINARY_DIR          "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-build"
+                    SOURCE_DIR          "/home/max/Code/MiniProjects/ACGarage/src/testing/01-ftxui/build/_deps/ftxui-src"
+                    BINARY_DIR          "/home/max/Code/MiniProjects/ACGarage/src/testing/01-ftxui/build/_deps/ftxui-build"
                     CONFIGURE_COMMAND   ""
                     BUILD_COMMAND       ""
                     INSTALL_COMMAND     ""

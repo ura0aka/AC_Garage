@@ -1,4 +1,4 @@
-# Install script for directory: /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-subbuild
+# Install script for directory: /home/max/Code/MiniProjects/ACGarage/src/testing/01-ftxui/build/_deps/ftxui-subbuild
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-subbuild/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/max/Code/MiniProjects/ACGarage/src/testing/01-ftxui/build/_deps/ftxui-subbuild/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

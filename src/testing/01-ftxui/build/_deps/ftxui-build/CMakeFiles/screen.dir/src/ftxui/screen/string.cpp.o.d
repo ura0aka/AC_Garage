@@ -1,7 +1,7 @@
 _deps/ftxui-build/CMakeFiles/screen.dir/src/ftxui/screen/string.cpp.o: \
- /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/screen/string.cpp \
+ /home/max/Code/MiniProjects/ACGarage/src/testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/screen/string.cpp \
  /usr/include/stdc-predef.h \
- /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include/ftxui/screen/string.hpp \
+ /home/max/Code/MiniProjects/ACGarage/src/testing/01-ftxui/build/_deps/ftxui-src/include/ftxui/screen/string.hpp \
  /usr/include/c++/12/string \
  /usr/include/x86_64-linux-gnu/c++/12/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/12/bits/os_defines.h \
@@ -122,5 +122,5 @@ _deps/ftxui-build/CMakeFiles/screen.dir/src/ftxui/screen/string.cpp.o: \
  /usr/include/c++/12/bits/vector.tcc /usr/include/c++/12/array \
  /usr/include/c++/12/compare /usr/include/c++/12/cstddef \
  /usr/include/c++/12/tuple /usr/include/c++/12/bits/uses_allocator.h \
- /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include/ftxui/screen/deprecated.hpp \
- /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/screen/string_internal.hpp
+ /home/max/Code/MiniProjects/ACGarage/src/testing/01-ftxui/build/_deps/ftxui-src/include/ftxui/screen/deprecated.hpp \
+ /home/max/Code/MiniProjects/ACGarage/src/testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/screen/string_internal.hpp

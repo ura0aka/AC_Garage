@@ -1,5 +1,5 @@
 _deps/ftxui-build/CMakeFiles/component.dir/src/ftxui/component/animation.cpp.o: \
- /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/component/animation.cpp \
+ /home/max/Code/MiniProjects/ACGarage/src/testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/component/animation.cpp \
  /usr/include/stdc-predef.h /usr/include/c++/12/cmath \
  /usr/include/x86_64-linux-gnu/c++/12/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/12/bits/os_defines.h \
@@ -86,7 +86,7 @@ _deps/ftxui-build/CMakeFiles/component.dir/src/ftxui/component/animation.cpp.o: 
  /usr/include/c++/12/tr1/riemann_zeta.tcc /usr/include/c++/12/utility \
  /usr/include/c++/12/bits/stl_relops.h \
  /usr/include/c++/12/initializer_list \
- /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include/ftxui/component/animation.hpp \
+ /home/max/Code/MiniProjects/ACGarage/src/testing/01-ftxui/build/_deps/ftxui-src/include/ftxui/component/animation.hpp \
  /usr/include/c++/12/chrono /usr/include/c++/12/bits/chrono.h \
  /usr/include/c++/12/ratio /usr/include/c++/12/cstdint \
  /usr/lib/gcc/x86_64-linux-gnu/12/include/stdint.h /usr/include/stdint.h \

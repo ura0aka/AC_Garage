@@ -19,7 +19,7 @@ if(NOT ftxui_POPULATED)
   add_subdirectory(${ftxui_SOURCE_DIR} ${ftxui_BINARY_DIR} EXCLUDE_FROM_ALL)
 endif()
  
-add_executable(${PROJECT_NAME} window.cpp)
+add_executable(${PROJECT_NAME} main_tui.cpp)
 target_include_directories(${PROJECT_NAME} PRIVATE src)
  
 target_link_libraries(${PROJECT_NAME}

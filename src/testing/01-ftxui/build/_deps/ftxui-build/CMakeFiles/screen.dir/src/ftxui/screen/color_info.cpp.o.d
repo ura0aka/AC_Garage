@@ -1,7 +1,7 @@
 _deps/ftxui-build/CMakeFiles/screen.dir/src/ftxui/screen/color_info.cpp.o: \
- /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/screen/color_info.cpp \
+ /home/max/Code/MiniProjects/ACGarage/src/testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/screen/color_info.cpp \
  /usr/include/stdc-predef.h \
- /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include/ftxui/screen/color_info.hpp \
+ /home/max/Code/MiniProjects/ACGarage/src/testing/01-ftxui/build/_deps/ftxui-src/include/ftxui/screen/color_info.hpp \
  /usr/include/c++/12/cstdint \
  /usr/include/x86_64-linux-gnu/c++/12/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/12/bits/os_defines.h \
@@ -22,7 +22,7 @@ _deps/ftxui-build/CMakeFiles/screen.dir/src/ftxui/screen/color_info.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/wchar.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
- /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include/ftxui/screen/color.hpp \
+ /home/max/Code/MiniProjects/ACGarage/src/testing/01-ftxui/build/_deps/ftxui-src/include/ftxui/screen/color.hpp \
  /usr/include/c++/12/string /usr/include/c++/12/bits/stringfwd.h \
  /usr/include/c++/12/bits/memoryfwd.h \
  /usr/include/c++/12/bits/char_traits.h \

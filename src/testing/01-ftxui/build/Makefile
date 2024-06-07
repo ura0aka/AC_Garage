@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/max/Code/Testing/01-ftxui
+CMAKE_SOURCE_DIR = /home/max/Code/MiniProjects/ACGarage/src/testing/01-ftxui
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/max/Code/Testing/01-ftxui/build
+CMAKE_BINARY_DIR = /home/max/Code/MiniProjects/ACGarage/src/testing/01-ftxui/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -78,7 +78,7 @@ package/fast: package
 # Special rule for the target package_source
 package_source:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
-	/usr/bin/cpack --config ./CPackSourceConfig.cmake /home/max/Code/Testing/01-ftxui/build/CPackSourceConfig.cmake
+	/usr/bin/cpack --config ./CPackSourceConfig.cmake /home/max/Code/MiniProjects/ACGarage/src/testing/01-ftxui/build/CPackSourceConfig.cmake
 .PHONY : package_source
 
 # Special rule for the target package_source
@@ -152,9 +152,9 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/max/Code/Testing/01-ftxui/build/CMakeFiles /home/max/Code/Testing/01-ftxui/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/max/Code/MiniProjects/ACGarage/src/testing/01-ftxui/build/CMakeFiles /home/max/Code/MiniProjects/ACGarage/src/testing/01-ftxui/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/max/Code/Testing/01-ftxui/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/max/Code/MiniProjects/ACGarage/src/testing/01-ftxui/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -233,29 +233,29 @@ component/fast:
 	$(MAKE) $(MAKESILENT) -f _deps/ftxui-build/CMakeFiles/component.dir/build.make _deps/ftxui-build/CMakeFiles/component.dir/build
 .PHONY : component/fast
 
-window.o: window.cpp.o
-.PHONY : window.o
+main_tui.o: main_tui.cpp.o
+.PHONY : main_tui.o
 
 # target to build an object file
-window.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/a.out.dir/build.make CMakeFiles/a.out.dir/window.cpp.o
-.PHONY : window.cpp.o
+main_tui.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/a.out.dir/build.make CMakeFiles/a.out.dir/main_tui.cpp.o
+.PHONY : main_tui.cpp.o
 
-window.i: window.cpp.i
-.PHONY : window.i
+main_tui.i: main_tui.cpp.i
+.PHONY : main_tui.i
 
 # target to preprocess a source file
-window.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/a.out.dir/build.make CMakeFiles/a.out.dir/window.cpp.i
-.PHONY : window.cpp.i
+main_tui.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/a.out.dir/build.make CMakeFiles/a.out.dir/main_tui.cpp.i
+.PHONY : main_tui.cpp.i
 
-window.s: window.cpp.s
-.PHONY : window.s
+main_tui.s: main_tui.cpp.s
+.PHONY : main_tui.s
 
 # target to generate assembly for a file
-window.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/a.out.dir/build.make CMakeFiles/a.out.dir/window.cpp.s
-.PHONY : window.cpp.s
+main_tui.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/a.out.dir/build.make CMakeFiles/a.out.dir/main_tui.cpp.s
+.PHONY : main_tui.cpp.s
 
 # Help Target
 help:
@@ -275,9 +275,9 @@ help:
 	@echo "... component"
 	@echo "... dom"
 	@echo "... screen"
-	@echo "... window.o"
-	@echo "... window.i"
-	@echo "... window.s"
+	@echo "... main_tui.o"
+	@echo "... main_tui.i"
+	@echo "... main_tui.s"
 .PHONY : help
 
 

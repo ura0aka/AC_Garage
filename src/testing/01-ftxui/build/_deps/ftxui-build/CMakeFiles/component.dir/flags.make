@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src -isystem /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include
+CXX_INCLUDES = -I/home/max/Code/MiniProjects/ACGarage/src/testing/01-ftxui/build/_deps/ftxui-src/src -isystem /home/max/Code/MiniProjects/ACGarage/src/testing/01-ftxui/build/_deps/ftxui-src/include
 
 CXX_FLAGS = 
 

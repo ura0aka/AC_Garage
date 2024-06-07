@@ -1,4 +1,4 @@
-# Install script for directory: /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/doc
+# Install script for directory: /home/max/Code/MiniProjects/ACGarage/src/testing/01-ftxui/build/_deps/ftxui-src/doc
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

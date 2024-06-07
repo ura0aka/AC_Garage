@@ -1,7 +1,7 @@
 _deps/ftxui-build/CMakeFiles/screen.dir/src/ftxui/screen/box.cpp.o: \
- /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/screen/box.cpp \
+ /home/max/Code/MiniProjects/ACGarage/src/testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/screen/box.cpp \
  /usr/include/stdc-predef.h \
- /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include/ftxui/screen/box.hpp \
+ /home/max/Code/MiniProjects/ACGarage/src/testing/01-ftxui/build/_deps/ftxui-src/include/ftxui/screen/box.hpp \
  /usr/include/c++/12/algorithm /usr/include/c++/12/bits/stl_algobase.h \
  /usr/include/x86_64-linux-gnu/c++/12/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/12/bits/os_defines.h \

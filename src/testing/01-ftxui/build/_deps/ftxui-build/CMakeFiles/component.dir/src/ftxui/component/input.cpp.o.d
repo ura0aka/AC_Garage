@@ -1,5 +1,5 @@
 _deps/ftxui-build/CMakeFiles/component.dir/src/ftxui/component/input.cpp.o: \
- /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/component/input.cpp \
+ /home/max/Code/MiniProjects/ACGarage/src/testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/component/input.cpp \
  /usr/include/stdc-predef.h /usr/include/c++/12/algorithm \
  /usr/include/c++/12/bits/stl_algobase.h \
  /usr/include/x86_64-linux-gnu/c++/12/bits/c++config.h \
@@ -183,38 +183,38 @@ _deps/ftxui-build/CMakeFiles/component.dir/src/ftxui/component/input.cpp.o: \
  /usr/include/c++/12/bits/istream.tcc \
  /usr/include/c++/12/bits/sstream.tcc /usr/include/c++/12/utility \
  /usr/include/c++/12/bits/stl_relops.h \
- /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include/ftxui/component/captured_mouse.hpp \
- /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include/ftxui/component/component.hpp \
- /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include/ftxui/component/component_base.hpp \
- /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include/ftxui/dom/elements.hpp \
- /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include/ftxui/dom/canvas.hpp \
- /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include/ftxui/screen/color.hpp \
- /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include/ftxui/screen/image.hpp \
- /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include/ftxui/screen/box.hpp \
- /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include/ftxui/screen/pixel.hpp \
- /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include/ftxui/dom/direction.hpp \
- /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include/ftxui/dom/flexbox_config.hpp \
- /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include/ftxui/dom/linear_gradient.hpp \
+ /home/max/Code/MiniProjects/ACGarage/src/testing/01-ftxui/build/_deps/ftxui-src/include/ftxui/component/captured_mouse.hpp \
+ /home/max/Code/MiniProjects/ACGarage/src/testing/01-ftxui/build/_deps/ftxui-src/include/ftxui/component/component.hpp \
+ /home/max/Code/MiniProjects/ACGarage/src/testing/01-ftxui/build/_deps/ftxui-src/include/ftxui/component/component_base.hpp \
+ /home/max/Code/MiniProjects/ACGarage/src/testing/01-ftxui/build/_deps/ftxui-src/include/ftxui/dom/elements.hpp \
+ /home/max/Code/MiniProjects/ACGarage/src/testing/01-ftxui/build/_deps/ftxui-src/include/ftxui/dom/canvas.hpp \
+ /home/max/Code/MiniProjects/ACGarage/src/testing/01-ftxui/build/_deps/ftxui-src/include/ftxui/screen/color.hpp \
+ /home/max/Code/MiniProjects/ACGarage/src/testing/01-ftxui/build/_deps/ftxui-src/include/ftxui/screen/image.hpp \
+ /home/max/Code/MiniProjects/ACGarage/src/testing/01-ftxui/build/_deps/ftxui-src/include/ftxui/screen/box.hpp \
+ /home/max/Code/MiniProjects/ACGarage/src/testing/01-ftxui/build/_deps/ftxui-src/include/ftxui/screen/pixel.hpp \
+ /home/max/Code/MiniProjects/ACGarage/src/testing/01-ftxui/build/_deps/ftxui-src/include/ftxui/dom/direction.hpp \
+ /home/max/Code/MiniProjects/ACGarage/src/testing/01-ftxui/build/_deps/ftxui-src/include/ftxui/dom/flexbox_config.hpp \
+ /home/max/Code/MiniProjects/ACGarage/src/testing/01-ftxui/build/_deps/ftxui-src/include/ftxui/dom/linear_gradient.hpp \
  /usr/include/c++/12/optional \
- /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include/ftxui/dom/node.hpp \
- /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include/ftxui/dom/requirement.hpp \
- /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include/ftxui/screen/screen.hpp \
- /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include/ftxui/screen/terminal.hpp \
- /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include/ftxui/util/ref.hpp \
- /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include/ftxui/screen/string.hpp \
+ /home/max/Code/MiniProjects/ACGarage/src/testing/01-ftxui/build/_deps/ftxui-src/include/ftxui/dom/node.hpp \
+ /home/max/Code/MiniProjects/ACGarage/src/testing/01-ftxui/build/_deps/ftxui-src/include/ftxui/dom/requirement.hpp \
+ /home/max/Code/MiniProjects/ACGarage/src/testing/01-ftxui/build/_deps/ftxui-src/include/ftxui/screen/screen.hpp \
+ /home/max/Code/MiniProjects/ACGarage/src/testing/01-ftxui/build/_deps/ftxui-src/include/ftxui/screen/terminal.hpp \
+ /home/max/Code/MiniProjects/ACGarage/src/testing/01-ftxui/build/_deps/ftxui-src/include/ftxui/util/ref.hpp \
+ /home/max/Code/MiniProjects/ACGarage/src/testing/01-ftxui/build/_deps/ftxui-src/include/ftxui/screen/string.hpp \
  /usr/include/c++/12/variant /usr/include/c++/12/bits/parse_numbers.h \
- /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include/ftxui/dom/take_any_args.hpp \
- /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include/ftxui/dom/deprecated.hpp \
- /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include/ftxui/component/component_options.hpp \
+ /home/max/Code/MiniProjects/ACGarage/src/testing/01-ftxui/build/_deps/ftxui-src/include/ftxui/dom/take_any_args.hpp \
+ /home/max/Code/MiniProjects/ACGarage/src/testing/01-ftxui/build/_deps/ftxui-src/include/ftxui/dom/deprecated.hpp \
+ /home/max/Code/MiniProjects/ACGarage/src/testing/01-ftxui/build/_deps/ftxui-src/include/ftxui/component/component_options.hpp \
  /usr/include/c++/12/chrono /usr/include/c++/12/bits/chrono.h \
  /usr/include/c++/12/ratio /usr/include/c++/12/limits \
  /usr/include/c++/12/ctime \
- /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include/ftxui/component/animation.hpp \
- /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include/ftxui/component/event.hpp \
- /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include/ftxui/component/mouse.hpp \
- /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include/ftxui/component/screen_interactive.hpp \
+ /home/max/Code/MiniProjects/ACGarage/src/testing/01-ftxui/build/_deps/ftxui-src/include/ftxui/component/animation.hpp \
+ /home/max/Code/MiniProjects/ACGarage/src/testing/01-ftxui/build/_deps/ftxui-src/include/ftxui/component/event.hpp \
+ /home/max/Code/MiniProjects/ACGarage/src/testing/01-ftxui/build/_deps/ftxui-src/include/ftxui/component/mouse.hpp \
+ /home/max/Code/MiniProjects/ACGarage/src/testing/01-ftxui/build/_deps/ftxui-src/include/ftxui/component/screen_interactive.hpp \
  /usr/include/c++/12/atomic \
- /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include/ftxui/component/receiver.hpp \
+ /home/max/Code/MiniProjects/ACGarage/src/testing/01-ftxui/build/_deps/ftxui-src/include/ftxui/component/receiver.hpp \
  /usr/include/c++/12/condition_variable \
  /usr/include/c++/12/bits/std_mutex.h \
  /usr/include/c++/12/bits/unique_lock.h /usr/include/c++/12/mutex \
@@ -223,6 +223,6 @@ _deps/ftxui-build/CMakeFiles/component.dir/src/ftxui/component/input.cpp.o: \
  /usr/include/c++/12/bits/stl_queue.h /usr/include/c++/12/thread \
  /usr/include/c++/12/bits/std_thread.h \
  /usr/include/c++/12/bits/this_thread_sleep.h \
- /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include/ftxui/component/task.hpp \
- /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/screen/string_internal.hpp \
- /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/screen/util.hpp
+ /home/max/Code/MiniProjects/ACGarage/src/testing/01-ftxui/build/_deps/ftxui-src/include/ftxui/component/task.hpp \
+ /home/max/Code/MiniProjects/ACGarage/src/testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/screen/string_internal.hpp \
+ /home/max/Code/MiniProjects/ACGarage/src/testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/screen/util.hpp

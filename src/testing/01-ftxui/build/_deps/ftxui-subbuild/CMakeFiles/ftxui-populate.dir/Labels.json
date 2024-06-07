@@ -2,34 +2,34 @@
 	"sources" : 
 	[
 		{
-			"file" : "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-subbuild/CMakeFiles/ftxui-populate"
+			"file" : "/home/max/Code/MiniProjects/ACGarage/src/testing/01-ftxui/build/_deps/ftxui-subbuild/CMakeFiles/ftxui-populate"
 		},
 		{
-			"file" : "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-subbuild/CMakeFiles/ftxui-populate.rule"
+			"file" : "/home/max/Code/MiniProjects/ACGarage/src/testing/01-ftxui/build/_deps/ftxui-subbuild/CMakeFiles/ftxui-populate.rule"
 		},
 		{
-			"file" : "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-subbuild/CMakeFiles/ftxui-populate-complete.rule"
+			"file" : "/home/max/Code/MiniProjects/ACGarage/src/testing/01-ftxui/build/_deps/ftxui-subbuild/CMakeFiles/ftxui-populate-complete.rule"
 		},
 		{
-			"file" : "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-subbuild/ftxui-populate-prefix/src/ftxui-populate-stamp/ftxui-populate-build.rule"
+			"file" : "/home/max/Code/MiniProjects/ACGarage/src/testing/01-ftxui/build/_deps/ftxui-subbuild/ftxui-populate-prefix/src/ftxui-populate-stamp/ftxui-populate-build.rule"
 		},
 		{
-			"file" : "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-subbuild/ftxui-populate-prefix/src/ftxui-populate-stamp/ftxui-populate-configure.rule"
+			"file" : "/home/max/Code/MiniProjects/ACGarage/src/testing/01-ftxui/build/_deps/ftxui-subbuild/ftxui-populate-prefix/src/ftxui-populate-stamp/ftxui-populate-configure.rule"
 		},
 		{
-			"file" : "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-subbuild/ftxui-populate-prefix/src/ftxui-populate-stamp/ftxui-populate-download.rule"
+			"file" : "/home/max/Code/MiniProjects/ACGarage/src/testing/01-ftxui/build/_deps/ftxui-subbuild/ftxui-populate-prefix/src/ftxui-populate-stamp/ftxui-populate-download.rule"
 		},
 		{
-			"file" : "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-subbuild/ftxui-populate-prefix/src/ftxui-populate-stamp/ftxui-populate-install.rule"
+			"file" : "/home/max/Code/MiniProjects/ACGarage/src/testing/01-ftxui/build/_deps/ftxui-subbuild/ftxui-populate-prefix/src/ftxui-populate-stamp/ftxui-populate-install.rule"
 		},
 		{
-			"file" : "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-subbuild/ftxui-populate-prefix/src/ftxui-populate-stamp/ftxui-populate-mkdir.rule"
+			"file" : "/home/max/Code/MiniProjects/ACGarage/src/testing/01-ftxui/build/_deps/ftxui-subbuild/ftxui-populate-prefix/src/ftxui-populate-stamp/ftxui-populate-mkdir.rule"
 		},
 		{
-			"file" : "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-subbuild/ftxui-populate-prefix/src/ftxui-populate-stamp/ftxui-populate-patch.rule"
+			"file" : "/home/max/Code/MiniProjects/ACGarage/src/testing/01-ftxui/build/_deps/ftxui-subbuild/ftxui-populate-prefix/src/ftxui-populate-stamp/ftxui-populate-patch.rule"
 		},
 		{
-			"file" : "/home/max/Code/Testing/01-ftxui/build/_deps/ftxui-subbuild/ftxui-populate-prefix/src/ftxui-populate-stamp/ftxui-populate-test.rule"
+			"file" : "/home/max/Code/MiniProjects/ACGarage/src/testing/01-ftxui/build/_deps/ftxui-subbuild/ftxui-populate-prefix/src/ftxui-populate-stamp/ftxui-populate-test.rule"
 		}
 	],
 	"target" : 

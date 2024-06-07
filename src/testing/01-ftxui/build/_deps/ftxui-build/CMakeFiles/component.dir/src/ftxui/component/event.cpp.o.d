@@ -1,5 +1,5 @@
 _deps/ftxui-build/CMakeFiles/component.dir/src/ftxui/component/event.cpp.o: \
- /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/component/event.cpp \
+ /home/max/Code/MiniProjects/ACGarage/src/testing/01-ftxui/build/_deps/ftxui-src/src/ftxui/component/event.cpp \
  /usr/include/stdc-predef.h /usr/include/c++/12/map \
  /usr/include/c++/12/bits/stl_tree.h \
  /usr/include/c++/12/bits/stl_algobase.h \
@@ -47,8 +47,8 @@ _deps/ftxui-build/CMakeFiles/component.dir/src/ftxui/component/event.cpp.o: \
  /usr/include/c++/12/bits/range_access.h \
  /usr/include/c++/12/bits/erase_if.h /usr/include/c++/12/utility \
  /usr/include/c++/12/bits/stl_relops.h \
- /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include/ftxui/component/event.hpp \
- /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include/ftxui/component/mouse.hpp \
+ /home/max/Code/MiniProjects/ACGarage/src/testing/01-ftxui/build/_deps/ftxui-src/include/ftxui/component/event.hpp \
+ /home/max/Code/MiniProjects/ACGarage/src/testing/01-ftxui/build/_deps/ftxui-src/include/ftxui/component/mouse.hpp \
  /usr/include/c++/12/string /usr/include/c++/12/bits/stringfwd.h \
  /usr/include/c++/12/bits/char_traits.h \
  /usr/include/c++/12/bits/postypes.h /usr/include/c++/12/cwchar \
@@ -123,7 +123,7 @@ _deps/ftxui-build/CMakeFiles/component.dir/src/ftxui/component/event.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/types/error_t.h \
  /usr/include/c++/12/bits/charconv.h \
  /usr/include/c++/12/bits/basic_string.tcc \
- /home/max/Code/Testing/01-ftxui/build/_deps/ftxui-src/include/ftxui/screen/string.hpp \
+ /home/max/Code/MiniProjects/ACGarage/src/testing/01-ftxui/build/_deps/ftxui-src/include/ftxui/screen/string.hpp \
  /usr/include/c++/12/vector /usr/include/c++/12/bits/stl_uninitialized.h \
  /usr/include/c++/12/bits/stl_vector.h \
  /usr/include/c++/12/bits/stl_bvector.h \

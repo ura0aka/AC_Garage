@@ -8,6 +8,26 @@
 class AC;
 class Datafile;
 
+std::string getPlayerInput(const std::string& message)
+{
+  std::string sInput;
+  while(true)
+  {
+    std::cout << message;
+    std::getline(std::cin, sInput);
+
+    if(std::cin.fail())
+    {
+      std::cin.clear();
+      std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+      std::cout << ">> ERROR: Invalid input, please try again." << std::endl;
+    }
+    else
+      break;   
+  }
+  return sInput;
+}
+
 class Player
 {
   public: 
@@ -30,7 +50,7 @@ class Player
   void save_mech_data()
   {
     // create directory to store each individual part for the AC
-    std::string sDirName = "AC_saveFile";
+    std::string sDirName = getPlayerInput(">> Enter the file name where to save your AC desing: ");
 
     // first erase all files to overwrite if files already present in directory
     if(std::filesystem::exists(sDirName))
@@ -169,8 +189,9 @@ class Player
   }
 
 
-  void read_mech_data(Datafile &df, const std::string& sDirName)
+  void read_mech_data(Datafile &df)
   {
+    std::string sDirName = getPlayerInput(">> Enter the name of the save file: ");
     if(!std::filesystem::exists(sDirName))
     {
       std::cerr << ">> ERROR: Could not locate directory: " << sDirName << std::endl;

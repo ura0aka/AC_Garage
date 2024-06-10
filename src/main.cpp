@@ -87,8 +87,9 @@ int main()
   while(in_garage)
   {
     // run garage system
-    std::cout << "What would you like to do, Raven? \n";
-    std::cout << "\n1.Add/Switch Parts \n2.Display Mech \n3.Display Inventory \n4.Save Build \n5.Load Build \n6.Read File (test) \n7.Quit \n";
+    std::cout << "========\n GARAGE \n========\n";
+    std::cout << ">> What would you like to do, Raven? \n--------------------------------------\n";
+    std::cout << "\n1.Add/Switch Parts \n2.Display Mech \n3.Display Inventory \n4.Save Build \n5.Load Build \n6.Quit \n";
     int nOption = prompt_for_numeric<int>("Select an option: ");
     switch(nOption)
     {
@@ -114,15 +115,10 @@ int main()
       }
       case 5:
       {
-        player_1.load_mech_data(df,"AC_saveFile.dat");
+        player_1.read_mech_data(df);
         break;
       }
       case 6:
-      {
-        player_1.read_mech_data(df,"AC_saveFile");
-        break;
-      }
-      case 7:
       {
         in_garage = false;
         break;
